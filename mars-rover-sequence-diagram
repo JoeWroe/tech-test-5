@@ -1,0 +1,9 @@
+nasaController:Class
+marsRover:Class
+plateau:Class
+
+nasaController:link established=marsRover.linkToRover()
+
+nasaController:rover landed=marsRover.land()
+marsRover:landing location=nasaController.landLocation()
+nasaController:nav grid applied=plateau.applyNavGrid()
