@@ -130,7 +130,7 @@ Keeping with the example above, User Story One has produced the following steps 
 
 **Step One**
 
-Using the messages taken from the Messages and Domain Objects table, define the most basic functionality.
+Using the messages taken from the 'Messages and Domain Objects' table, define the most basic functionality.
 
 ![alt text](./images/readme/fig_1.1.png "'Land a rover' message implemented.")
 
@@ -152,4 +152,6 @@ Look at the design one last time, checking for nouns and verbs that indicate mis
 
 ![alt text](./images/readme/fig_1.4.png "Add new class that can be found from the design.")
 
-####Test Driven Development (TDD)
+####Test Driven Development
+
+Test Driven Development (TDD) starts with a test. The first test is an automation test, which to begin with fails. The next step is to write a failing unit test followed by the simplest code required to pass that unit test. Continuing down this path leads to writing more failing unit tests and passing them with the simplest code possible until the original automation test passes. This was the path followed when developing the Mars Rover application.
