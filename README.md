@@ -146,5 +146,11 @@ Refactor to consider how the Messages can form the basis of the application as o
 
 ![alt text](./images/readme/fig_1.3.png "Refactor so plateau is now created when the mars rover asks where it should land.")
 
+**Step Four (Refactor during implementation)**
+
+To demonstrate the flexibility of design done in this way, once implementation has begun, it becomes clear that the creation of a plateau is not the responsibility of #land. This has come about during the creation of #land which would now require an argument containing the size of the plateau, not something it should know anything about. For this reason, the design has been changed.
+
+![alt text](./images/readme/fig_1.4.png "Flexible design allows for refactors once implementation has begun.")
+
 ####Test Driven Development
 Test Driven Development (TDD) starts with a test. The first test is an automation test, which to begin with fails. The next step is to write a failing unit test followed by the simplest code required to pass that unit test. Continuing down this path leads to writing more failing unit tests and passing them with the simplest code possible until the original automation test passes. This was the path followed when developing the Mars Rover application.
