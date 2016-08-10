@@ -121,6 +121,14 @@ So that I can have a robotic rover on a Mars plateau,
 I'd like to be able to land a Mars Rover on the plateau.
 ```
 
+**User Story Two:**
+*This plateau, which is curiously rectangular, must be navigated by the rovers so that their on-board cameras can get a complete view of the surrounding terrain to send back to Earth.*
+```
+As a NASA controller,
+So that I can navigate a plateau,
+I'd like a navigation system with a Mars Rover.
+```
+
 ####Sequence Diagram
 In order to form an intention about the messages and objects that are going to satisfy each User Story, a flexible way to experiment with these messages and objects needs to be devised. Sequence Diagrams are a perfect, low-cost way to do this. They provide a means of trying out different arrangements, provide clarity to design and allow collaboration and communication with other designers.
 

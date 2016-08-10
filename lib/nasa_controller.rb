@@ -12,6 +12,6 @@ class NasaController
   end
 
   def land_rover
-    plateau.current_rovers << current_rover
+    current_rover.land_rover(plateau)
   end
 end

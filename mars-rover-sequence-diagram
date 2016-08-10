@@ -1,13 +1,14 @@
-nasaController:Class
-/plateau:Class
-/marsRover:Class
+NasaController:Class
+Plateau:Class
+RoboticRover:Class
 
-nasaController:link established=marsRover.new(#linkToRover)
+NasaController:plateau_added=Plateau.initialize(plateau)
 
-nasaController:plateau established=plateau.new(#establishPlateau(size))
+NasaController:link_established=RoboticRover.link_to_rover
 
-nasaController:rover landed=marsRover.land()
-marsRover:plateau and location as #land() arg=nasaController.where?
+NasaController:Plateau.current_rovers()=RoboticRover.land()
+RoboticRover:current_rovers()=Plateau.land()
+
 
 
 

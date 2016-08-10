@@ -17,7 +17,6 @@
         1,
         1,
         1,
-        1,
         null,
         null,
         null
@@ -31,6 +30,8 @@
         3,
         4,
         null,
+        3,
+        null,
         1,
         null,
         1,
@@ -45,7 +46,6 @@
         1,
         null,
         null,
-        1,
         1,
         1,
         1,
@@ -110,14 +110,27 @@
         1,
         null,
         1,
+        2,
+        null,
+        2,
+        null,
         1,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/Joe/Library/Mobile Documents/com~apple~CloudDocs/documents/work-stuff/applications/thoughtworks/mars-rover/lib/robotic_rover.rb": [
         1,
+        null,
+        1,
+        2,
+        null,
         null
       ]
     },
-    "timestamp": 1470798734
+    "timestamp": 1470811964
   }
 }
