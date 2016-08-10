@@ -12,7 +12,7 @@ describe 'User Stories' do
     I'd like to be able to land a Mars Rover on the plateau." do
       nasa_controller.link_to_rover(robotic_rover)
       expect(nasa_controller.current_rover).to eq(robotic_rover)
-      nasa_controller.land_rover(start_position)
+      nasa_controller.land_rover
       expect(plateau.current_rovers).to eq([robotic_rover])
     end
   end

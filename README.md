@@ -142,15 +142,9 @@ Consider the domain objects and their creation.
 
 **Step Three**
 
-Refactor to consider how the Messages can form the basis of the application as opposed to the Domain Objects. Notice how the #land method is now the trigger for the creation of the plateau object.
+Refactor to consider how the Messages can form the basis of the application as opposed to the Domain Objects.
 
-![alt text](./images/readme/fig_1.3.png "Refactor so plateau is now created when the mars rover asks where it should land.")
-
-**Step Four (Refactor during implementation)**
-
-To demonstrate the flexibility of design done in this way, once implementation has begun, it becomes clear that the creation of a plateau is not the responsibility of #land. This has come about during the creation of #land which would now require an argument containing the size of the plateau, not something it should know anything about. For this reason, the design has been changed.
-
-![alt text](./images/readme/fig_1.4.png "Flexible design allows for refactors once implementation has begun.")
+![alt text](./images/readme/fig_1.3.png "Refactor with the focus on the messages and how they get objects to interact.")
 
 ####Test Driven Development
 Test Driven Development (TDD) starts with a test. The first test is an automation test, which to begin with fails. The next step is to write a failing unit test followed by the simplest code required to pass that unit test. Continuing down this path leads to writing more failing unit tests and passing them with the simplest code possible until the original automation test passes. This was the path followed when developing the Mars Rover application.

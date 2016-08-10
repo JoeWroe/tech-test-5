@@ -16,13 +16,13 @@ describe NasaController do
 
   context 'interacting with a rover' do
     it 'can create a link' do
-      nasa_controller.link_to_rover robotic_rover
+      nasa_controller.link_to_rover(robotic_rover)
       expect(nasa_controller.current_rover).to eq robotic_rover
     end
 
     it 'can land a rover' do
-      nasa_controller.link_to_rover robotic_rover
-      nasa_controller.land_rover start_position
+      nasa_controller.link_to_rover(robotic_rover)
+      nasa_controller.land_rover
       expect(plateau.current_rovers).to eq [robotic_rover]
     end
   end
