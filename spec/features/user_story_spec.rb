@@ -4,6 +4,7 @@ describe 'User Stories' do
   let(:plateau)         { Plateau.new(plateau_size) }
 
   let(:start_position) { '0 0 N' }
+  let(:plateau_size)   { '5 5' }
 
   describe 'User Story One' do
     it "As a NASA controller,
