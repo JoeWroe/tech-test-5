@@ -7,7 +7,10 @@ class RoboticRover
 
   def land_rover(location)
     location.current_rovers << self
+    toggle_nav_grid
   end
+
+  private
 
   def toggle_nav_grid
     @nav_grid_active = !@nav_grid_active

@@ -17,8 +17,8 @@ describe RoboticRover do
       expect(robotic_rover.nav_grid_active).to eq false
     end
 
-    it 'can be turned on' do
-      robotic_rover.toggle_nav_grid
+    it 'is turned on at landing' do
+      robotic_rover.land_rover(plateau)
       expect(robotic_rover.nav_grid_active).to eq true
     end
   end
