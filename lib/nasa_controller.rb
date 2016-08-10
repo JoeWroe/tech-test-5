@@ -6,19 +6,17 @@ class NasaController
   end
 
   def link_to_rover(robotic_rover)
+    # add error based on arguments type
     @current_rover = robotic_rover
+  end
+
+  def land_rover(params)
   end
 
   # attr_reader :plateau
 
   # def initialize
-  #   @current_rover = []
   #   @plateau       = []
-  # end
-  #
-  #
-  # def establish_plateau(size)
-  #   @plateau = Plateau.new(size)
   # end
   #
   # def land_rover(initial_position)

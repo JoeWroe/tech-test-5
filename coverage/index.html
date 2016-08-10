@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-08-10T10:01:45+09:00">2016-08-10T10:01:45+09:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-08-10T10:49:43+09:00">2016-08-10T10:49:43+09:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">93.75%</span></span>
+    (<span class="covered_percent"><span class="green">97.44%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.13
+         1.32
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>7</b> files in total.
-    <b>32</b> relevant lines. 
-    <span class="green"><b>30</b> lines covered</span> and
-    <span class="red"><b>2</b> lines missed </span>
+    <b>39</b> relevant lines. 
+    <span class="green"><b>38</b> lines covered</span> and
+    <span class="red"><b>1</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -53,11 +53,11 @@
       <tr>
         <td class="strong"><a href="#94cc52331b59dc130c089f16939664601b7297be" class="src_link" title="lib/nasa_controller.rb">lib/nasa_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>27</td>
-        <td>6</td>
-        <td>6</td>
+        <td>25</td>
+        <td>7</td>
+        <td>7</td>
         <td>0</td>
-        <td>1.3</td>
+        <td>1.6</td>
       </tr>
       
       <tr>
@@ -73,7 +73,7 @@
       <tr>
         <td class="strong"><a href="#f77c3d2e8a0e61a62997a36601cb64a062f6e25c" class="src_link" title="lib/robotic_rover.rb">lib/robotic_rover.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>7</td>
+        <td>2</td>
         <td>1</td>
         <td>1</td>
         <td>0</td>
@@ -82,30 +82,30 @@
       
       <tr>
         <td class="strong"><a href="#4b62f72c8c08ef2bedae04fb8e98046745f97968" class="src_link" title="spec/features/user_story_spec.rb">spec/features/user_story_spec.rb</a></td>
-        <td class="yellow strong">81.82 %</td>
-        <td>18</td>
+        <td class="green strong">91.67 %</td>
+        <td>19</td>
+        <td>12</td>
         <td>11</td>
-        <td>9</td>
-        <td>2</td>
-        <td>1.0</td>
+        <td>1</td>
+        <td>1.3</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#eaaf8553d414741ef1c1aa5e1080cc58ea3cf7b1" class="src_link" title="spec/nasa_controller_spec.rb">spec/nasa_controller_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>45</td>
-        <td>8</td>
-        <td>8</td>
+        <td>21</td>
+        <td>12</td>
+        <td>12</td>
         <td>0</td>
-        <td>1.3</td>
+        <td>1.4</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#03f38bba894fffc19ce39dd5f790519481c17595" class="src_link" title="spec/plateau_spec.rb">spec/plateau_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>20</td>
-        <td>2</td>
-        <td>2</td>
+        <td>5</td>
+        <td>3</td>
+        <td>3</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -113,7 +113,7 @@
       <tr>
         <td class="strong"><a href="#b78244711b14b0cd1a53e18edafc16cddd2865d2" class="src_link" title="spec/robotic_rover_spec.rb">spec/robotic_rover_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>11</td>
+        <td>5</td>
         <td>3</td>
         <td>3</td>
         <td>0</td>
@@ -141,8 +141,8 @@
     <h3>lib/nasa_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>6</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>7</b> relevant lines. 
+      <span class="green"><b>7</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -174,8 +174,8 @@
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="5">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="5">
+          <span class="hits">3</span>
           
           <code class="ruby">    @current_rover = []</code>
         </li>
@@ -198,115 +198,103 @@
           <code class="ruby">  def link_to_rover(robotic_rover)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="9">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="9">
           
-          <code class="ruby">    @current_rover = robotic_rover</code>
+          
+          <code class="ruby">    # add error based on arguments type</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="covered" data-hits="3" data-linenumber="10">
+          <span class="hits">3</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    @current_rover = robotic_rover</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
           
           
-          <code class="ruby">  # attr_reader :plateau</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">  def land_rover(params)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby">  # def initialize</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby">  #   @current_rover = []</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby">  #   @plateau       = []</code>
+          <code class="ruby">  # attr_reader :plateau</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
           
           
-          <code class="ruby">  # end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  # def initialize</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  #   @plateau       = []</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
           
           
-          <code class="ruby">  # def establish_plateau(size)</code>
+          <code class="ruby">  # end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
           
           
-          <code class="ruby">  #   @plateau = Plateau.new(size)</code>
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
           
           
-          <code class="ruby">  # end</code>
+          <code class="ruby">  # def land_rover(initial_position)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="23">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  #   @plateau.current_rovers.push(current_rover)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
           
           
-          <code class="ruby">  # def land_rover(initial_position)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="25">
-          
-          
-          <code class="ruby">  #   @plateau.current_rovers.push(current_rover)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="26">
-          
-          
           <code class="ruby">  # end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">end</code>
@@ -435,36 +423,6 @@
         <li class="never" data-hits="" data-linenumber="2">
           
           
-          <code class="ruby">  # attr_reader :name</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="3">
-          
-          
-          <code class="ruby">  #</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="4">
-          
-          
-          <code class="ruby">  # def initialize(name)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="5">
-          
-          
-          <code class="ruby">  #   @name = name</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="6">
-          
-          
-          <code class="ruby">  # end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="7">
-          
-          
           <code class="ruby">end</code>
         </li>
       
@@ -475,11 +433,11 @@
         <div class="source_table" id="4b62f72c8c08ef2bedae04fb8e98046745f97968">
   <div class="header">
     <h3>spec/features/user_story_spec.rb</h3>
-    <h4><span class="yellow">81.82 %</span> covered</h4>
+    <h4><span class="green">91.67 %</span> covered</h4>
     <div>
-      <b>11</b> relevant lines. 
-      <span class="green"><b>9</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <b>12</b> relevant lines. 
+      <span class="green"><b>11</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -504,8 +462,8 @@
           <code class="ruby">  let(:robotic_rover)   { RoboticRover.new }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="4">
+          <span class="hits">2</span>
           
           <code class="ruby">  let(:plateau)         { Plateau.new(plateau_size) }</code>
         </li>
@@ -516,79 +474,85 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="covered" data-hits="2" data-linenumber="6">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  let(:start_position) { &#39;0 0 N&#39; }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
+        <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
           <code class="ruby">  describe &#39;User Story One&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
+        <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
           <code class="ruby">    it &quot;As a NASA controller,</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">    So that I can have a robotic rover on a Mars plateau,</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">    I&#39;d like to be able to land a Mars Rover on the plateau.&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
           <code class="ruby">      nasa_controller.link_to_rover(robotic_rover)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="12">
+        <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
           <code class="ruby">      expect(nasa_controller.current_rover).to eq(robotic_rover)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
+        <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">      nasa_controller.land_rover(initial_position)</code>
+          <code class="ruby">      nasa_controller.land_rover(start_position)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="14">
-          
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
           
           <code class="ruby">      expect(plateau.current_rovers).to eq(robotic_rover)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="15">
+        <li class="missed" data-hits="0" data-linenumber="16">
           
           
-          <code class="ruby">      expect(robotic_rover.position).to eq(initial_position)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="16">
-          
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      expect(robotic_rover.position).to eq(start_position)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby">end</code>
@@ -603,8 +567,8 @@
     <h3>spec/nasa_controller_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>8</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
+      <b>12</b> relevant lines. 
+      <span class="green"><b>12</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -630,8 +594,8 @@
           <code class="ruby">describe NasaController do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="4">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="4">
+          <span class="hits">3</span>
           
           <code class="ruby">  subject(:nasa_controller) { described_class.new }</code>
         </li>
@@ -642,8 +606,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="6">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="6">
+          <span class="hits">3</span>
           
           <code class="ruby">  let(:robotic_rover) { double(:robotic_rover) }</code>
         </li>
@@ -654,229 +618,85 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="8">
+          <span class="hits">2</span>
           
-          <code class="ruby">  context &#39;interaction with a rover&#39; do</code>
+          <code class="ruby">  let(:start_position) { &#39;0 0 N&#39; }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="9">
           
-          <code class="ruby">    it &#39;can create a link&#39; do</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">      nasa_controller.link_to_rover(robotic_rover)</code>
+          <code class="ruby">  context &#39;interacting with a rover&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
+          <code class="ruby">    it &#39;can create a link&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      nasa_controller.link_to_rover(robotic_rover)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
           <code class="ruby">      expect(nasa_controller.current_rover).to eq(robotic_rover)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="12">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="13">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby">  # let(:name) { &#39;Rouge Leader&#39; }</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby">  # let(:size) { &#39;5 5&#39; }</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  #</code>
+          <code class="ruby">    it &#39;can land a rover&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  # describe &#39;creating required objects&#39; do</code>
+          <code class="ruby">      nasa_controller.link_to_rover(robotic_rover)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  #   it &#39;when linked, a rover is created&#39; do</code>
+          <code class="ruby">      expect(nasa_controller.land_rover(start_position)).to eq(start_position)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
           
           
-          <code class="ruby">  #     expect(nasa_controller.link_to_rover(name)).to be_an_instance_of MarsRover</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
           
           
-          <code class="ruby">  #   end</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
-          
-          
-          <code class="ruby">  #</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="22">
-          
-          
-          <code class="ruby">  #   it &#39;saves an instance of a new rover&#39; do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="23">
-          
-          
-          <code class="ruby">  #     nasa_controller.link_to_rover(name)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="24">
-          
-          
-          <code class="ruby">  #     expect(nasa_controller.current_rover).to be_an_instance_of MarsRover</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="25">
-          
-          
-          <code class="ruby">  #   end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="26">
-          
-          
-          <code class="ruby">  #</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="27">
-          
-          
-          <code class="ruby">  #   it &#39;can establish a plateau&#39; do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="28">
-          
-          
-          <code class="ruby">  #     expect(nasa_controller.establish_plateau(size)).to be_an_instance_of Plateau</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="29">
-          
-          
-          <code class="ruby">  #   end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="30">
-          
-          
-          <code class="ruby">  #</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="31">
-          
-          
-          <code class="ruby">  #   it &#39;saves an instance of a new plateau&#39; do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="32">
-          
-          
-          <code class="ruby">  #     nasa_controller.establish_plateau(size)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="33">
-          
-          
-          <code class="ruby">  #     expect(nasa_controller.plateau).to be_an_instance_of Plateau</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="34">
-          
-          
-          <code class="ruby">  #   end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="35">
-          
-          
-          <code class="ruby">  # end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="36">
-          
-          
-          <code class="ruby">  #</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="37">
-          
-          
-          <code class="ruby">  # describe &#39;initiating relationships between objects&#39; do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="38">
-          
-          
-          <code class="ruby">  #   it &#39;lands a rover on the plateau&#39; do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="39">
-          
-          
-          <code class="ruby">  #     nasa_controller.link_to_rover(name)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="40">
-          
-          
-          <code class="ruby">  #     nasa_controller.establish_plateau(size)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="41">
-          
-          
-          <code class="ruby">  #     nasa_controller.land_rover(&#39;0 0 N&#39;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="42">
-          
-          
-          <code class="ruby">  #     expect(nasa_controller.plateau.current_rovers).to eq(name)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="43">
-          
-          
-          <code class="ruby">  #   end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="44">
-          
-          
-          <code class="ruby">  # end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="45">
           
           
           <code class="ruby">end</code>
@@ -891,8 +711,8 @@
     <h3>spec/plateau_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>2</b> relevant lines. 
-      <span class="green"><b>2</b> lines covered</span> and
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -918,103 +738,13 @@
           <code class="ruby">describe Plateau do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  # subject(:plateau) { described_class.new(&#39;5 5&#39;) }</code>
+          <code class="ruby">  subject(:plateau) { described_class.new(&#39;5 5&#39;) }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
-          
-          
-          <code class="ruby">  #</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="6">
-          
-          
-          <code class="ruby">  # context &#39;on initialization&#39; do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="7">
-          
-          
-          <code class="ruby">  #   it &#39;has a size attribute&#39; do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="8">
-          
-          
-          <code class="ruby">  #     expect(plateau).to respond_to(:size)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="9">
-          
-          
-          <code class="ruby">  #   end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="10">
-          
-          
-          <code class="ruby">  #</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="11">
-          
-          
-          <code class="ruby">  #   it &#39;formats the size input&#39; do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="12">
-          
-          
-          <code class="ruby">  #     expect(plateau.size).to eq(&#39;5, 5&#39;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="13">
-          
-          
-          <code class="ruby">  #   end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="14">
-          
-          
-          <code class="ruby">  #</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="15">
-          
-          
-          <code class="ruby">  #   it &#39;can contain rovers&#39; do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="16">
-          
-          
-          <code class="ruby">  #     expect(plateau.current_rovers).to eq([])</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="17">
-          
-          
-          <code class="ruby">  #     #Can this be alter to eq &#39;type of Array&#39;?</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="18">
-          
-          
-          <code class="ruby">  #   end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="19">
-          
-          
-          <code class="ruby">  # end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby">end</code>
@@ -1063,42 +793,6 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="6">
-          
-          
-          <code class="ruby">  # describe &#39;on initialization&#39; do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="7">
-          
-          
-          <code class="ruby">  #   it &#39;should start with a name&#39; do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="8">
-          
-          
-          <code class="ruby">  #     expect(mars_rover.name).to eq(&#39;Rouge Leader&#39;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="9">
-          
-          
-          <code class="ruby">  #   end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="10">
-          
-          
-          <code class="ruby">  # end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">end</code>
