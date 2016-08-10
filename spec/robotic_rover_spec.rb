@@ -11,4 +11,10 @@ describe RoboticRover do
       expect(plateau.current_rovers).to eq([robotic_rover])
     end
   end
+
+  context 'navigation system' do
+    it 'starts inactive' do
+      expect(robotic_rover.nav_grid_active).to eq false
+    end
+  end
 end
