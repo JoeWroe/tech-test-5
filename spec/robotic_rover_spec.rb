@@ -16,5 +16,10 @@ describe RoboticRover do
     it 'starts inactive' do
       expect(robotic_rover.nav_grid_active).to eq false
     end
+
+    it 'can be turned on' do
+      robotic_rover.toggle_nav_grid
+      expect(robotic_rover.nav_grid_active).to eq true
+    end
   end
 end
