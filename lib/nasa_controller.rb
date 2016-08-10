@@ -14,14 +14,4 @@ class NasaController
   def land_rover(start_position)
     plateau.current_rovers << current_rover
   end
-
-  # attr_reader :plateau
-
-  # def initialize
-  #   @plateau       = []
-  # end
-  #
-  # def land_rover(initial_position)
-  #   @plateau.current_rovers.push(current_rover)
-  # end
 end

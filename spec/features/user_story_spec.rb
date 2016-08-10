@@ -14,7 +14,6 @@ describe 'User Stories' do
       expect(nasa_controller.current_rover).to eq(robotic_rover)
       nasa_controller.land_rover(start_position)
       expect(plateau.current_rovers).to eq([robotic_rover])
-      expect(robotic_rover.position).to eq(start_position)
     end
   end
 end
