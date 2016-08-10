@@ -1,11 +1,14 @@
 require 'nasa_controller'
 
 describe NasaController do
-  let(:name) { 'Rouge Leader' }
+  subject(:nasa_controller) { described_class.new }
 
-  describe 'creating required objects' do
-    it 'when linked, a rover is created' do
-      expect(subject.link_to_rover(name)).to be_an_instance_of MarsRover
+  let(:robotic_rover) { double(:robotic_rover) }
+
+  context 'interaction with a rover' do
+    it 'can create a link' do
+      nasa_controller.link_to_rover(robotic_rover)
+      expect(nasa_controller.current_rover).to eq(robotic_rover)
     end
   end
 end
