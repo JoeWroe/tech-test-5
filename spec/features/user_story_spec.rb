@@ -1,5 +1,5 @@
 describe 'User Stories' do
-  let(:nasa_controller) { NasaController.new }
+  let(:nasa_controller) { NasaController.new(plateau: plateau) }
   let(:robotic_rover)   { RoboticRover.new }
   let(:plateau)         { Plateau.new(plateau_size) }
 
@@ -13,7 +13,7 @@ describe 'User Stories' do
       nasa_controller.link_to_rover(robotic_rover)
       expect(nasa_controller.current_rover).to eq(robotic_rover)
       nasa_controller.land_rover(start_position)
-      expect(plateau.current_rovers).to eq(robotic_rover)
+      expect(plateau.current_rovers).to eq([robotic_rover])
       expect(robotic_rover.position).to eq(start_position)
     end
   end

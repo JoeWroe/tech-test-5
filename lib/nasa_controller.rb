@@ -1,7 +1,8 @@
 class NasaController
-  attr_reader :current_rover
+  attr_reader :plateau, :current_rover
 
-  def initialize
+  def initialize(plateau:)
+    @plateau = plateau
     @current_rover = []
   end
 
@@ -11,6 +12,7 @@ class NasaController
   end
 
   def land_rover(start_position)
+    plateau.current_rovers << current_rover
   end
 
   # attr_reader :plateau
