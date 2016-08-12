@@ -1,3 +1,4 @@
+# A rover capable of intersteller exploration.
 class RoboticRover
   attr_reader :nav_grid_active, :nav_grid
 

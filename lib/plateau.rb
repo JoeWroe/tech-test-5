@@ -1,3 +1,5 @@
+# A pysical piece of land. Research outside of the scope of this program
+# determines the size of the Plateau.
 class Plateau
   attr_reader :size, :current_rovers
 

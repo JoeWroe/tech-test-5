@@ -1,7 +1,8 @@
+# Represents the NASA employee and their possible commands.
 class NasaController
   attr_reader :plateau, :current_rover
 
-  def initialize(plateau: )
+  def initialize(plateau:)
     @plateau = plateau
     @current_rover = []
   end
