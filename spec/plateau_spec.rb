@@ -6,12 +6,8 @@ describe Plateau do
   let(:plateau_size) { '5 5' }
 
   context 'on initialization' do
-    it 'has maximum size along X axis' do
-      expect(plateau.x_axis_limit).to eq(5)
-    end
-
-    it 'has maximum size along Y axis' do
-      expect(plateau.y_axis_limit).to eq(5)
+    it 'has a size proprty' do
+      expect(plateau.size).to eq('5 5')
     end
 
     it 'contains no rovers' do

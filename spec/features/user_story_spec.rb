@@ -24,7 +24,7 @@ describe 'User Stories' do
       expect(robotic_rover.nav_grid_active).to eq false
       nasa_controller.land_rover
       expect(robotic_rover.nav_grid_active).to eq true
-      expect(robotic_rover.nav_grid_size).to eq plateau_size
+      expect(robotic_rover.nav_grid.grid_size).to eq plateau_size
       expect(robotic_rover.position).to eq start_position
     end
   end

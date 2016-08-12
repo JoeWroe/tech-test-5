@@ -21,5 +21,10 @@ describe RoboticRover do
       robotic_rover.land_rover(plateau)
       expect(robotic_rover.nav_grid_active).to eq true
     end
+
+    it 'maps the plateau' do
+      robotic_rover.land_rover(plateau)
+      expect(robotic_rover.nav_grid.grid_size).not_to eq nil
+    end
   end
 end
