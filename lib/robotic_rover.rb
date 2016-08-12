@@ -19,6 +19,6 @@ class RoboticRover
   end
 
   def create_nav_grid(location)
-    @nav_grid = NavGrid.new(location)
+    @nav_grid = NavGrid.new(location.size)
   end
 end

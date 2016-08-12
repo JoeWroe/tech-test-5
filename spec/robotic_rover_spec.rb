@@ -3,7 +3,7 @@ require 'robotic_rover'
 describe RoboticRover do
   subject(:robotic_rover) { described_class.new }
 
-  let(:plateau) { double(:plateau, current_rovers: []) }
+  let(:plateau) { double(:plateau, size: '5 5', current_rovers: []) }
 
   context 'landing' do
     it 'can land' do
