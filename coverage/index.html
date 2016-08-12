@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-08-12T23:12:56+09:00">2016-08-12T23:12:56+09:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-08-12T23:21:38+09:00">2016-08-12T23:21:38+09:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">99.05%</span></span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.89
+         1.96
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>9</b> files in total.
-    <b>105</b> relevant lines. 
-    <span class="green"><b>104</b> lines covered</span> and
-    <span class="red"><b>1</b> lines missed </span>
+    <b>107</b> relevant lines. 
+    <span class="green"><b>107</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -63,11 +63,11 @@
       <tr>
         <td class="strong"><a href="#0b9df78702f510fe394138688fd5eb821ff474d9" class="src_link" title="lib/nav_grid.rb">lib/nav_grid.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>8</td>
-        <td>5</td>
-        <td>5</td>
+        <td>9</td>
+        <td>6</td>
+        <td>6</td>
         <td>0</td>
-        <td>3.8</td>
+        <td>4.5</td>
       </tr>
       
       <tr>
@@ -92,12 +92,12 @@
       
       <tr>
         <td class="strong"><a href="#4b62f72c8c08ef2bedae04fb8e98046745f97968" class="src_link" title="spec/features/user_story_spec.rb">spec/features/user_story_spec.rb</a></td>
-        <td class="green strong">94.74 %</td>
-        <td>31</td>
-        <td>19</td>
-        <td>18</td>
-        <td>1</td>
-        <td>1.4</td>
+        <td class="green strong">100.0 %</td>
+        <td>32</td>
+        <td>20</td>
+        <td>20</td>
+        <td>0</td>
+        <td>1.5</td>
       </tr>
       
       <tr>
@@ -281,8 +281,8 @@
     <h3>lib/nav_grid.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>5</b> relevant lines. 
-      <span class="green"><b>5</b> lines covered</span> and
+      <b>6</b> relevant lines. 
+      <span class="green"><b>6</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -299,7 +299,7 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  attr_reader :x_axis_limit, :y_axis_limit</code>
+          <code class="ruby">  attr_reader :x_axis_limit, :y_axis_limit, :grid_size</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
@@ -326,13 +326,19 @@
           <code class="ruby">    @y_axis_limit = size.split(&#39; &#39;)[1].to_i</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="covered" data-hits="8" data-linenumber="7">
+          <span class="hits">8</span>
+          
+          <code class="ruby">    @grid_size    = [@x_axis_limit, @y_axis_limit]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby">end</code>
@@ -573,11 +579,11 @@
         <div class="source_table" id="4b62f72c8c08ef2bedae04fb8e98046745f97968">
   <div class="header">
     <h3>spec/features/user_story_spec.rb</h3>
-    <h4><span class="green">94.74 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>19</b> relevant lines. 
-      <span class="green"><b>18</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <b>20</b> relevant lines. 
+      <span class="green"><b>20</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -626,145 +632,151 @@
           <code class="ruby">  let(:plateau_size)   { &#39;5 5&#39; }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="covered" data-hits="2" data-linenumber="8">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  let(:nav_grid_size)  { [5, 5] }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  describe &#39;User Story One&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;As a NASA controller,</code>
+          <code class="ruby">  describe &#39;User Story One&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    So that I can have a robotic rover on a Mars plateau,</code>
+          <code class="ruby">    it &quot;As a NASA controller,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
           
           
-          <code class="ruby">    I&#39;d like to be able to land a Mars Rover on the plateau.&quot; do</code>
+          <code class="ruby">    So that I can have a robotic rover on a Mars plateau,</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="13">
           
-          <code class="ruby">      nasa_controller.link_to_rover(robotic_rover)</code>
+          
+          <code class="ruby">    I&#39;d like to be able to land a Mars Rover on the plateau.&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(nasa_controller.current_rover).to eq robotic_rover</code>
+          <code class="ruby">      nasa_controller.link_to_rover(robotic_rover)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(nasa_controller.land_rover).to eq [robotic_rover]</code>
+          <code class="ruby">      expect(nasa_controller.current_rover).to eq robotic_rover</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      expect(nasa_controller.land_rover).to eq [robotic_rover]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="19">
           
-          <code class="ruby">  describe &#39;User Story Two&#39; do</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;As a NASA controller,</code>
+          <code class="ruby">  describe &#39;User Story Two&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    So that I can navigate a plateau,</code>
+          <code class="ruby">    it &quot;As a NASA controller,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
           
           
-          <code class="ruby">    I&#39;d like a navigation system with a Mars Rover.&quot; do</code>
+          <code class="ruby">    So that I can navigate a plateau,</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="23">
           
-          <code class="ruby">      nasa_controller.link_to_rover(robotic_rover)</code>
+          
+          <code class="ruby">    I&#39;d like a navigation system with a Mars Rover.&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(robotic_rover.nav_grid_active).to eq false</code>
+          <code class="ruby">      nasa_controller.link_to_rover(robotic_rover)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
-          <code class="ruby">      nasa_controller.land_rover</code>
+          <code class="ruby">      expect(robotic_rover.nav_grid_active).to eq false</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(robotic_rover.nav_grid_active).to eq true</code>
+          <code class="ruby">      nasa_controller.land_rover</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="27">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(robotic_rover.nav_grid.grid_size).to eq plateau_size</code>
+          <code class="ruby">      expect(robotic_rover.nav_grid_active).to eq true</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="28">
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
           
+          <code class="ruby">      expect(robotic_rover.nav_grid.grid_size).to eq nav_grid_size</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
           
           <code class="ruby">      expect(robotic_rover.position).to eq start_position</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="29">
-          
-          
-          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="30">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby">end</code>

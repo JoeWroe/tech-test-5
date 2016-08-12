@@ -5,6 +5,7 @@ describe 'User Stories' do
 
   let(:start_position) { '0 0 N' }
   let(:plateau_size)   { '5 5' }
+  let(:nav_grid_size)  { [5, 5] }
 
   describe 'User Story One' do
     it "As a NASA controller,
@@ -24,7 +25,7 @@ describe 'User Stories' do
       expect(robotic_rover.nav_grid_active).to eq false
       nasa_controller.land_rover
       expect(robotic_rover.nav_grid_active).to eq true
-      expect(robotic_rover.nav_grid.grid_size).to eq plateau_size
+      expect(robotic_rover.nav_grid.grid_size).to eq nav_grid_size
       expect(robotic_rover.position).to eq start_position
     end
   end
