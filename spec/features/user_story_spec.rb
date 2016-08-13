@@ -30,4 +30,15 @@ describe 'User Stories' do
       expect(robotic_rover.position).to eq start_position
     end
   end
+
+  describe 'User Story Three' do
+    it "As a NASA controller,
+    So that I can send a complete view of the terrain back to earth,
+    I'd like to control the on-board camera." do
+      nasa_controller.link_to_rover(robotic_rover)
+      expect(robotic_rover.camera_feed_active).to eq false
+      nasa_controller.land_rover(start_position)
+      expect(robotic_rover.camera_feed_active).to eq true
+    end
+  end
 end

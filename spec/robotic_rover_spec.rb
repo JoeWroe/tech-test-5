@@ -40,4 +40,15 @@ describe RoboticRover do
       expect(robotic_rover.nav_grid.grid_size).not_to eq nil
     end
   end
+
+  context 'camera' do
+    it 'starts inactive' do
+      expect(robotic_rover.camera_feed_active).to eq false
+    end
+
+    it 'is turned on at landing' do
+      robotic_rover.land_rover(start_position, plateau)
+      expect(robotic_rover.camera_feed_active).to eq true
+    end
+  end
 end
