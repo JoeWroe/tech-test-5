@@ -137,6 +137,14 @@ So that I can send a complete view of the terrain back to earth,
 I'd like to control the on-board camera.
 ```
 
+**User Story Four**
+*A rover’s position and location is represented by a combination of x and y co-ordinates and a letter representing one of the four cardinal compass points.*
+```
+As a NASA controller,
+So that I know whereabouts on the plateau the rover is,
+I'd like the rover to have a position made up of two co-ordinates and a cardinal compass point.
+```
+
 ####Sequence Diagram
 In order to form an intention about the messages and objects that are going to satisfy each User Story, a flexible way to experiment with these messages and objects needs to be devised. Sequence Diagrams are a perfect, low-cost way to do this. They provide a means of trying out different arrangements, provide clarity to design and allow collaboration and communication with other designers.
 

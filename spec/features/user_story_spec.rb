@@ -41,4 +41,14 @@ describe 'User Stories' do
       expect(robotic_rover.camera_feed_active).to eq true
     end
   end
+
+  describe 'User Story Four' do
+    it "As a NASA controller,
+    So that I know whereabouts on the plateau the rover is,
+    I'd like the rover to have a position made up of two co-ordinates and a cardinal compass point." do
+      nasa_controller.link_to_rover(robotic_rover)
+      nasa_controller.land_rover(start_position)
+      expect(robotic_rover.position).to eq start_position
+    end
+  end
 end
