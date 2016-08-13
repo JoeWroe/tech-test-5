@@ -2,14 +2,21 @@ NasaController:Class
 Plateau:Class
 RoboticRover:Class
 /NavGrid:Class
+/Camera:Class
 
 NasaController:@plateau = Plateau=Plateau.initialize(plateau)
 
 NasaController:@current_rover = RoboticRover=RoboticRover.link_to_rover
 
+RoboticRover:Camera.new()
+
 NasaController:Plateau.current_rovers()=RoboticRover.land_rover(start_position)
 RoboticRover:>RoboticRover.toggle_nav_grid(@plateau)
 RoboticRover:@nav_grid = NavGrid=NavGrid.new(Plateau.size)
+RoboticRover:stop
+
+RoboticRover:>RoboticRover.start_camera_feed()
+RoboticRover:Camera.toggle_recording()
 RoboticRover:stop
 
 RoboticRover:>RoboticRover.@position = start_position
