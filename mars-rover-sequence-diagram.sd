@@ -1,0 +1,33 @@
+NasaController:Class
+Plateau:Class
+RoboticRover:Class
+/NavGrid:Class
+
+NasaController:@plateau = Plateau=Plateau.initialize(plateau)
+
+NasaController:@current_rover = RoboticRover=RoboticRover.link_to_rover
+
+NasaController:Plateau.current_rovers()=RoboticRover.land_rover(start_position)
+RoboticRover:>RoboticRover.toggle_nav_grid(@plateau)
+RoboticRover:@nav_grid = NavGrid=NavGrid.new(Plateau.size)
+RoboticRover:stop
+
+RoboticRover:>RoboticRover.@position = start_position
+RoboticRover:stop
+
+RoboticRover:current_rovers()=Plateau.push(RoboticRover)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
