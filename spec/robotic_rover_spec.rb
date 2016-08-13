@@ -15,7 +15,7 @@ describe RoboticRover do
 
   context 'landing' do
     it 'can land' do
-      robotic_rover.land_rover(plateau)
+      robotic_rover.land_rover(start_position, plateau)
       expect(plateau.current_rovers).to eq([robotic_rover])
     end
 
@@ -31,12 +31,12 @@ describe RoboticRover do
     end
 
     it 'is turned on at landing' do
-      robotic_rover.land_rover(plateau)
+      robotic_rover.land_rover(start_position, plateau)
       expect(robotic_rover.nav_grid_active).to eq true
     end
 
     it 'maps the plateau' do
-      robotic_rover.land_rover(plateau)
+      robotic_rover.land_rover(start_position, plateau)
       expect(robotic_rover.nav_grid.grid_size).not_to eq nil
     end
   end

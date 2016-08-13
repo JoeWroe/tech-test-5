@@ -8,7 +8,7 @@ class RoboticRover
     @position = []
   end
 
-  def land_rover(location)
+  def land_rover(start_position, location)
     toggle_nav_grid(location)
     location.current_rovers << self
   end

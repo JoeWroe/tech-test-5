@@ -13,6 +13,6 @@ class NasaController
   end
 
   def land_rover(start_position)
-    current_rover.land_rover(plateau)
+    current_rover.land_rover(start_position, plateau)
   end
 end
