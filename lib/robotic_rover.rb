@@ -1,10 +1,11 @@
 # A rover capable of intersteller exploration.
 class RoboticRover
-  attr_reader :nav_grid_active, :nav_grid
+  attr_reader :nav_grid_active, :nav_grid, :position
 
   def initialize
     @nav_grid_active = false
     @nav_grid = []
+    @position = []
   end
 
   def land_rover(location)

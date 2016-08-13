@@ -7,7 +7,7 @@
         3,
         3,
         null,
-        1,
+        2,
         3,
         2,
         null,
@@ -68,6 +68,7 @@
         null
       ],
       "/Users/Joe/Library/Mobile Documents/com~apple~CloudDocs/documents/work-stuff/applications/thoughtworks/mars-rover/lib/nasa_controller.rb": [
+        null,
         1,
         1,
         null,
@@ -108,6 +109,8 @@
         null
       ],
       "/Users/Joe/Library/Mobile Documents/com~apple~CloudDocs/documents/work-stuff/applications/thoughtworks/mars-rover/lib/nav_grid.rb": [
+        null,
+        null,
         1,
         1,
         null,
@@ -138,6 +141,8 @@
         null
       ],
       "/Users/Joe/Library/Mobile Documents/com~apple~CloudDocs/documents/work-stuff/applications/thoughtworks/mars-rover/lib/plateau.rb": [
+        null,
+        null,
         1,
         1,
         null,
@@ -151,9 +156,15 @@
         1,
         null,
         1,
-        5,
+        6,
         null,
         4,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
         null,
         1,
         1,
@@ -180,12 +191,14 @@
         null
       ],
       "/Users/Joe/Library/Mobile Documents/com~apple~CloudDocs/documents/work-stuff/applications/thoughtworks/mars-rover/lib/robotic_rover.rb": [
+        null,
         1,
         1,
         null,
         1,
-        6,
-        6,
+        7,
+        7,
+        7,
         null,
         null,
         1,
@@ -206,6 +219,6 @@
         null
       ]
     },
-    "timestamp": 1471013019
+    "timestamp": 1471047736
   }
 }
