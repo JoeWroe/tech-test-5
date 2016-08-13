@@ -10,6 +10,7 @@ class RoboticRover
 
   def land_rover(start_position, location)
     toggle_nav_grid(location)
+    @position = start_position
     location.current_rovers << self
   end
 

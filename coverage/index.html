@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-08-13T17:40:50+09:00">2016-08-13T17:40:50+09:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-08-13T17:44:37+09:00">2016-08-13T17:44:37+09:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.13
+         2.16
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>9</b> files in total.
-    <b>116</b> relevant lines. 
-    <span class="green"><b>116</b> lines covered</span> and
+    <b>117</b> relevant lines. 
+    <span class="green"><b>117</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -83,11 +83,11 @@
       <tr>
         <td class="strong"><a href="#f77c3d2e8a0e61a62997a36601cb64a062f6e25c" class="src_link" title="lib/robotic_rover.rb">lib/robotic_rover.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>26</td>
-        <td>15</td>
-        <td>15</td>
+        <td>27</td>
+        <td>16</td>
+        <td>16</td>
         <td>0</td>
-        <td>4.1</td>
+        <td>4.2</td>
       </tr>
       
       <tr>
@@ -449,8 +449,8 @@
     <h3>lib/robotic_rover.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>15</b> relevant lines. 
-      <span class="green"><b>15</b> lines covered</span> and
+      <b>16</b> relevant lines. 
+      <span class="green"><b>16</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -533,82 +533,88 @@
         <li class="covered" data-hits="6" data-linenumber="13">
           <span class="hits">6</span>
           
-          <code class="ruby">    location.current_rovers &lt;&lt; self</code>
+          <code class="ruby">    @position = start_position</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="covered" data-hits="6" data-linenumber="14">
+          <span class="hits">6</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    location.current_rovers &lt;&lt; self</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
+        <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
           <code class="ruby">  private</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
+        <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
           <code class="ruby">  def toggle_nav_grid(location)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="19">
+        <li class="covered" data-hits="6" data-linenumber="20">
           <span class="hits">6</span>
           
           <code class="ruby">    @nav_grid_active = !@nav_grid_active</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="20">
+        <li class="covered" data-hits="6" data-linenumber="21">
           <span class="hits">6</span>
           
           <code class="ruby">    create_nav_grid(location)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="23">
+        <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
           
           <code class="ruby">  def create_nav_grid(location)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="24">
+        <li class="covered" data-hits="6" data-linenumber="25">
           <span class="hits">6</span>
           
           <code class="ruby">    @nav_grid = NavGrid.new(location.size)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="26">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby">end</code>
