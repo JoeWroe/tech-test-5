@@ -12,7 +12,7 @@ class NasaController
     @current_rover = robotic_rover
   end
 
-  def land_rover
+  def land_rover(start_position)
     current_rover.land_rover(plateau)
   end
 end

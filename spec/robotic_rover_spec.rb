@@ -5,6 +5,8 @@ describe RoboticRover do
 
   let(:plateau) { double(:plateau, size: '5 5', current_rovers: []) }
 
+  let(:start_position) { '0 0 N' }
+
   context 'on initialization' do
     it 'has a position attribute' do
       expect(robotic_rover.position).to eq []
@@ -15,6 +17,11 @@ describe RoboticRover do
     it 'can land' do
       robotic_rover.land_rover(plateau)
       expect(plateau.current_rovers).to eq([robotic_rover])
+    end
+
+    it 'sets a starting position' do
+      robotic_rover.land_rover(start_position, plateau)
+      expect(robotic_rover.position).to eq start_position
     end
   end
 

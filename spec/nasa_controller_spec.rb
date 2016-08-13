@@ -24,7 +24,7 @@ describe NasaController do
 
     it 'can land a rover' do
       nasa_controller.link_to_rover(robotic_rover)
-      expect(nasa_controller.land_rover).to eq landed_rover
+      expect(nasa_controller.land_rover(start_position)).to eq landed_rover
     end
   end
 end
