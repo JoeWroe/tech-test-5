@@ -18,7 +18,8 @@ class NasaController
 
   def command_input(commands)
     commands.split('').each do |command|
-      new_command_class = Command.new(command)
+      new_command_class = Command.new(command, current_rover)
+      current_rover.display_position
     end
   end
 end

@@ -1,4 +1,6 @@
 # A rover capable of intersteller exploration.
+require 'byebug'
+
 class RoboticRover
   attr_reader :nav_grid_active, :nav_grid, :position, :camera_feed_active
 
@@ -16,6 +18,10 @@ class RoboticRover
     @position = start_position
     start_camera_feed
     location.current_rovers << self
+  end
+
+  def display_position
+    "Rovers position: #{position}"
   end
 
   private

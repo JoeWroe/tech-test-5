@@ -7,7 +7,7 @@ describe 'User Stories' do
   let(:plateau_size)        { '5 5' }
   let(:nav_grid_size)       { [5, 5] }
   let(:movement_commands)   { 'M' }
-  let(:position_after_move) { ['1 0 N'] }
+  let(:position_after_move) { 'Rovers position: 1 0 N' }
 
   describe 'User Story One' do
     it "As a NASA controller,

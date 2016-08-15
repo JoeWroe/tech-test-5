@@ -5,7 +5,8 @@ describe RoboticRover do
 
   let(:plateau) { double(:plateau, size: '5 5', current_rovers: []) }
 
-  let(:start_position) { '0 0 N' }
+  let(:start_position)  { '0 0 N' }
+  let(:position_string) { "Rovers position: 0 0 N" }
 
   context 'on initialization' do
     it 'has a position attribute' do
@@ -38,6 +39,13 @@ describe RoboticRover do
     it 'maps the plateau' do
       robotic_rover.land_rover(start_position, plateau)
       expect(robotic_rover.nav_grid.grid_size).not_to eq nil
+    end
+  end
+
+  context 'position' do
+    it 'can be displayed' do
+      robotic_rover.land_rover(start_position, plateau)
+      expect(robotic_rover.display_position).to eq position_string
     end
   end
 

@@ -3,11 +3,16 @@ require 'nasa_controller'
 describe NasaController do
   subject(:nasa_controller) { described_class.new(plateau: plateau) }
 
-  let(:robotic_rover) { double(:robotic_rover, land_rover: landed_rover, new_position: new_position) }
-  let(:plateau)       { double(:plateau, current_rovers: []) }
+  let(:robotic_rover) { double(:robotic_rover,
+                          land_rover: landed_rover,
+                          display_position: display_position,
+                          new_position: new_position) }
+  let(:plateau)       { double(:plateau,
+                          current_rovers: []) }
 
-  let(:landed_rover) { [:landed_rover] }
-  let(:new_position) { "Rovers new position: 1 0 N" }
+  let(:landed_rover)     { [:landed_rover] }
+  let(:display_position) { "Rovers position: 0 0 N" }
+  let(:new_position)     { "Rovers position: 1 0 N" }
 
   let(:start_position)    { '0 0 N' }
   let(:movement_commands) { 'M' }
