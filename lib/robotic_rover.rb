@@ -11,6 +11,7 @@ class RoboticRover
   end
 
   def land_rover(start_position, location)
+    # add error if location argument does not have a #size attribute
     toggle_nav_grid(location)
     @position = start_position
     start_camera_feed

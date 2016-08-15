@@ -145,6 +145,14 @@ So that I know whereabouts on the plateau the rover is,
 I'd like the rover to have a position made up of two co-ordinates and a cardinal compass point.
 ```
 
+**User Story Five**
+*In order to control a rover, NASA sends a simple string of letters.*
+```
+As a NASA controller,
+So that I can control the rover,
+I'd like to send it a simple string of letters which alter it's position.
+```
+
 ####Sequence Diagram
 In order to form an intention about the messages and objects that are going to satisfy each User Story, a flexible way to experiment with these messages and objects needs to be devised. Sequence Diagrams are a perfect, low-cost way to do this. They provide a means of trying out different arrangements, provide clarity to design and allow collaboration and communication with other designers.
 

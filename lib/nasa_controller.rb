@@ -1,4 +1,4 @@
-# Represents the NASA employee and their possible commands.
+# Interface for use by a NASA employee.
 class NasaController
   attr_reader :plateau, :current_rover
 
@@ -14,5 +14,11 @@ class NasaController
 
   def land_rover(start_position)
     current_rover.land_rover(start_position, plateau)
+  end
+
+  def command_input(commands)
+    commands.split('').each do |command|
+      new_command_class = Command.new(command)
+    end
   end
 end

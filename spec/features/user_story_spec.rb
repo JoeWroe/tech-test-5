@@ -3,9 +3,11 @@ describe 'User Stories' do
   let(:robotic_rover)   { RoboticRover.new }
   let(:plateau)         { Plateau.new(plateau_size) }
 
-  let(:start_position) { '0 0 N' }
-  let(:plateau_size)   { '5 5' }
-  let(:nav_grid_size)  { [5, 5] }
+  let(:start_position)      { '0 0 N' }
+  let(:plateau_size)        { '5 5' }
+  let(:nav_grid_size)       { [5, 5] }
+  let(:movement_commands)   { 'M' }
+  let(:position_after_move) { ['1 0 N'] }
 
   describe 'User Story One' do
     it "As a NASA controller,
@@ -49,6 +51,17 @@ describe 'User Stories' do
       nasa_controller.link_to_rover(robotic_rover)
       nasa_controller.land_rover(start_position)
       expect(robotic_rover.position).to eq start_position
+    end
+  end
+
+  describe 'User Story Five' do
+    it "As a NASA controller,
+    So that I can control the rover,
+    I'd like to send it a simple string of letters which alter it's position." do
+      nasa_controller.link_to_rover(robotic_rover)
+      nasa_controller.land_rover(start_position)
+      nasa_controller.command_input(movement_commands)
+      expect(robotic_rover.position).to eq position_after_move
     end
   end
 end
