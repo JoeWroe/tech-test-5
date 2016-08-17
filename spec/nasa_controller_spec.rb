@@ -5,14 +5,14 @@ describe NasaController do
 
   let(:robotic_rover) { double(:robotic_rover,
                           land_rover: landed_rover,
-                          display_position: display_position,
-                          new_position: new_position) }
+                          move_forward_on_x: new_position,
+                          display_position: new_position) }
   let(:plateau)       { double(:plateau,
-                          current_rovers: []) }
+                          no_rovers_landed: [],
+                          one_rover_landed: landed_rover) }
 
-  let(:landed_rover)     { [:landed_rover] }
-  let(:display_position) { "Rovers position: 0 0 N" }
-  let(:new_position)     { "Rovers position: 1 0 N" }
+  let(:landed_rover)      { [:landed_rover] }
+  let(:new_position)      { "Rovers position: 1 0 N" }
 
   let(:start_position)    { '0 0 N' }
   let(:movement_commands) { 'M' }
@@ -32,12 +32,12 @@ describe NasaController do
 
     it 'can land a rover' do
       nasa_controller.link_to_rover(robotic_rover)
-      expect(nasa_controller.land_rover(start_position)).to eq landed_rover
+      expect(nasa_controller.land_rover(start_position)).to eq plateau.one_rover_landed
     end
 
     it 'can read a command input' do
       nasa_controller.link_to_rover(robotic_rover)
-      expect(nasa_controller.command_input(movement_commands)).to eq robotic_rover.new_position
+      expect(nasa_controller.command_input(movement_commands)).to eq new_position
     end
   end
 end

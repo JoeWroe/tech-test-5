@@ -1,4 +1,6 @@
 # Interface for use by a NASA employee.
+require './lib/command'
+
 class NasaController
   attr_reader :plateau, :current_rover
 
@@ -19,7 +21,8 @@ class NasaController
   def command_input(commands)
     commands.split('').each do |command|
       new_command_class = Command.new(command, current_rover)
-      current_rover.display_position
+      new_command_class.position_change
     end
+    current_rover.display_position
   end
 end

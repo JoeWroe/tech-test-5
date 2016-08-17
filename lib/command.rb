@@ -8,7 +8,7 @@ class Command
   end
 
   def position_change
-    if input === ['M']
+    if input === 'M'
       robotic_rover.move_forward_on_x
     end
   end

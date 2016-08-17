@@ -6,7 +6,7 @@ describe Plateau do
   let(:plateau_size) { '5 5' }
 
   context 'on initialization' do
-    it 'has a size proprty' do
+    it 'has a size property' do
       expect(plateau.size).to eq('5 5')
     end
 

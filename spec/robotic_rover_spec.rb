@@ -5,8 +5,9 @@ describe RoboticRover do
 
   let(:plateau) { double(:plateau, size: '5 5', current_rovers: []) }
 
-  let(:start_position)  { '0 0 N' }
-  let(:position_string) { "Rovers position: 0 0 N" }
+  let(:start_position)    { '0 0 N' }
+  let(:start_pos_array)   { [0, 0, 'N'] }
+  let(:display_start_pos) { "Rovers position: 0 0 N" }
 
   context 'on initialization' do
     it 'has a position attribute' do
@@ -22,7 +23,7 @@ describe RoboticRover do
 
     it 'sets a starting position' do
       robotic_rover.land_rover(start_position, plateau)
-      expect(robotic_rover.position).to eq start_position
+      expect(robotic_rover.position).to eq start_pos_array
     end
   end
 
@@ -45,7 +46,18 @@ describe RoboticRover do
   context 'position' do
     it 'can be displayed' do
       robotic_rover.land_rover(start_position, plateau)
-      expect(robotic_rover.display_position).to eq position_string
+      expect(robotic_rover.display_position).to eq display_start_pos
+    end
+
+    it 'can split a position to an array' do
+      robotic_rover.land_rover(start_position, plateau)
+      expect(robotic_rover.position).to eq [0, 0, 'N']
+    end
+
+    it 'can increase along the X axis' do
+      robotic_rover.land_rover(start_position, plateau)
+      robotic_rover.move_forward_on_x
+      expect(robotic_rover.position).to eq [1, 0, 'N']
     end
   end
 
