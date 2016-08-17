@@ -1,6 +1,6 @@
-# Interface for use by a NASA employee.
 require './lib/command'
 
+# Interface for use by a NASA employee.
 class NasaController
   attr_reader :plateau, :current_rover
 
@@ -15,10 +15,12 @@ class NasaController
   end
 
   def land_rover(start_position)
+    # add error if start_position is not in correct format
     current_rover.land_rover(start_position, plateau)
   end
 
   def command_input(commands)
+    # add error if commands are not in correct format
     command_iteration(commands)
     current_rover.display_position
   end
