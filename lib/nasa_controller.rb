@@ -19,10 +19,16 @@ class NasaController
   end
 
   def command_input(commands)
+    command_iteration(commands)
+    current_rover.display_position
+  end
+
+  private
+
+  def command_iteration(commands)
     commands.split('').each do |command|
       new_command_class = Command.new(command, current_rover)
       new_command_class.position_change
     end
-    current_rover.display_position
   end
 end

@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-08-17T12:19:52+09:00">2016-08-17T12:19:52+09:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-08-17T12:23:58+09:00">2016-08-17T12:23:58+09:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.34
+         3.31
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>13</b> files in total.
-    <b>212</b> relevant lines. 
-    <span class="green"><b>212</b> lines covered</span> and
+    <b>215</b> relevant lines. 
+    <span class="green"><b>215</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -73,11 +73,11 @@
       <tr>
         <td class="strong"><a href="#94cc52331b59dc130c089f16939664601b7297be" class="src_link" title="lib/nasa_controller.rb">lib/nasa_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>28</td>
-        <td>15</td>
-        <td>15</td>
+        <td>34</td>
+        <td>18</td>
+        <td>18</td>
         <td>0</td>
-        <td>3.0</td>
+        <td>2.7</td>
       </tr>
       
       <tr>
@@ -399,8 +399,8 @@
     <h3>lib/nasa_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>15</b> relevant lines. 
-      <span class="green"><b>15</b> lines covered</span> and
+      <b>18</b> relevant lines. 
+      <span class="green"><b>18</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -537,40 +537,76 @@
         <li class="covered" data-hits="2" data-linenumber="22">
           <span class="hits">2</span>
           
-          <code class="ruby">    commands.split(&#39;&#39;).each do |command|</code>
+          <code class="ruby">    command_iteration(commands)</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="23">
           <span class="hits">2</span>
           
-          <code class="ruby">      new_command_class = Command.new(command, current_rover)</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="24">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      new_command_class.position_change</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="25">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="26">
-          <span class="hits">2</span>
-          
           <code class="ruby">    current_rover.display_position</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def command_iteration(commands)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="29">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    commands.split(&#39;&#39;).each do |command|</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="30">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      new_command_class = Command.new(command, current_rover)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="31">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      new_command_class.position_change</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby">end</code>
