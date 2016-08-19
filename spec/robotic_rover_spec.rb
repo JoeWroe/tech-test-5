@@ -1,74 +1,71 @@
 require 'robotic_rover'
 
 describe RoboticRover do
-  subject(:robotic_rover) { described_class.new }
+  subject(:rover) { described_class.new }
 
-  let(:plateau) { double(:plateau, size: '5 5', current_rovers: []) }
+  let(:plateau) do
+    double(:plateau, size: '5 5',
+                     current_rovers: [])
+  end
 
-  let(:start_position)    { '0 0 N' }
-  let(:start_pos_array)   { [0, 0, 'N'] }
-  let(:display_start_pos) { "Rovers position: 0 0 N" }
+  let(:empty_instance_var) { [] }
+  let(:landed_rover)       { [rover] }
+  let(:start_pos)          { '0 0 N' }
+  let(:start_pos_array)    { [0, 0, 'N'] }
+  let(:display_start_pos)  { "Rovers position: 0 0 N" }
 
-  context 'on initialization' do
-    it 'has a position attribute' do
-      expect(robotic_rover.position).to eq []
+  context 'before landing' do
+    it 'has not created NavGrid' do
+      expect(rover.nav_grid).to eq empty_instance_var
+    end
+
+    it 'has not created Camera' do
+      expect(rover.camera).to eq empty_instance_var
     end
   end
 
-  context 'landing' do
-    it 'can land' do
-      robotic_rover.land_rover(start_position, plateau)
-      expect(plateau.current_rovers).to eq([robotic_rover])
+  context 'after landing' do
+    before { rover.land_rover(start_pos, plateau) }
+
+    it 'adds it to the plateau' do
+      expect(plateau.current_rovers).to eq landed_rover
     end
 
-    it 'sets a starting position' do
-      robotic_rover.land_rover(start_position, plateau)
-      expect(robotic_rover.position).to eq start_pos_array
-    end
-  end
+    describe 'camera' do
+      it 'is created' do
+        expect(rover.camera).not_to eq empty_instance_var
+      end
 
-  context 'navigation system' do
-    it 'starts inactive' do
-      expect(robotic_rover.nav_grid_active).to eq false
-    end
-
-    it 'is turned on at landing' do
-      robotic_rover.land_rover(start_position, plateau)
-      expect(robotic_rover.nav_grid_active).to eq true
+      it 'turns on' do
+        expect(rover.camera.recording).to eq true
+      end
     end
 
-    it 'maps the plateau' do
-      robotic_rover.land_rover(start_position, plateau)
-      expect(robotic_rover.nav_grid.grid_size).not_to eq nil
+    describe 'navigation system' do
+      it 'is created' do
+        expect(rover.nav_grid).not_to eq empty_instance_var
+      end
     end
   end
 
-  context 'position' do
+
+  describe 'position' do
+    it 'is set' do
+      expect(rover.position).to eq start_pos_array
+    end
     it 'can be displayed' do
-      robotic_rover.land_rover(start_position, plateau)
-      expect(robotic_rover.display_position).to eq display_start_pos
+      expect(rover.display_position).to eq display_start_pos
     end
 
     it 'can split a position to an array' do
-      robotic_rover.land_rover(start_position, plateau)
-      expect(robotic_rover.position).to eq [0, 0, 'N']
+      rover.land_rover(start_pos, plateau)
+      expect(rover.position).to eq [0, 0, 'N']
     end
 
     it 'can increase along the X axis' do
-      robotic_rover.land_rover(start_position, plateau)
-      robotic_rover.move_forward_on_x
-      expect(robotic_rover.position).to eq [1, 0, 'N']
-    end
-  end
-
-  context 'camera' do
-    it 'starts inactive' do
-      expect(robotic_rover.camera_feed_active).to eq false
-    end
-
-    it 'is turned on at landing' do
-      robotic_rover.land_rover(start_position, plateau)
-      expect(robotic_rover.camera_feed_active).to eq true
+      rover.land_rover(start_pos, plateau)
+      rover.move_forward_on_x
+      expect(rover.position).to eq [1, 0, 'N']
     end
   end
 end

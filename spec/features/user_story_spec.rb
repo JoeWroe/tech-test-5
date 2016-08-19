@@ -39,9 +39,8 @@ describe 'User Stories' do
     So that I can send a complete view of the terrain back to earth,
     I'd like to control the on-board camera." do
       nasa_controller.link_to_rover(robotic_rover)
-      expect(robotic_rover.camera_feed_active).to eq false
       nasa_controller.land_rover(start_position)
-      expect(robotic_rover.camera_feed_active).to eq true
+      expect(robotic_rover.camera.recording).to eq true
     end
   end
 
