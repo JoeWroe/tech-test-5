@@ -12,7 +12,7 @@ describe RoboticRover do
   let(:landed_rover)       { [rover] }
   let(:start_pos)          { '0 0 N' }
   let(:start_pos_array)    { [0, 0, 'N'] }
-  let(:display_start_pos)  { "Rovers position: 0 0 N" }
+  let(:display_start_pos)  { 'Rovers position: 0 0 N' }
 
   context 'before landing' do
     it 'has not created NavGrid' do

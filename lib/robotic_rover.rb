@@ -1,7 +1,7 @@
-# A rover capable of intersteller exploration.
 require './lib/camera'
 require './lib/nav_grid'
 
+# A rover capable of intersteller exploration.
 class RoboticRover
   attr_reader :camera, :nav_grid, :position
 
@@ -12,7 +12,6 @@ class RoboticRover
   end
 
   def land_rover(start_position, location)
-    # error if location argument does not have a #size attribute
     update_position(start_position)
     create_nav_grid(location)
     create_camera
@@ -21,7 +20,7 @@ class RoboticRover
 
   def display_position
     # add error if rover is not landed.
-    "Rovers position: #{position[0].to_s} #{position[1].to_s} #{position[2]}"
+    "Rovers position: #{position[0]} #{position[1]} #{position[2]}"
   end
 
   def move_forward_on_x
@@ -50,6 +49,7 @@ class RoboticRover
   end
 
   def create_nav_grid(location)
+    # error if location argument does not have a #size attribute
     @nav_grid = NavGrid.new(location.size)
   end
 end
