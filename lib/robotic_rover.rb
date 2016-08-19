@@ -13,7 +13,7 @@ class RoboticRover
 
   def land_rover(start_position, location)
     # add error if location argument does not have a #size attribute
-    split_position_to_array(start_position)
+    update_position(start_position)
     create_nav_grid(location)
     create_camera
     location.current_rovers << self
@@ -29,9 +29,13 @@ class RoboticRover
 
   private
 
+  def update_position(position)
+    pos_array = split_position_to_array(position)
+    @position = pos_array[0].to_i, pos_array[1].to_i, pos_array[2]
+  end
+
   def split_position_to_array(position)
-    start_array = position.split(' ')
-    @position = [start_array[0].to_i, start_array[1].to_i, start_array[2]]
+    position.split(' ')
   end
 
   def create_camera

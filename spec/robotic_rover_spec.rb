@@ -46,26 +46,20 @@ describe RoboticRover do
         expect(rover.nav_grid).not_to eq empty_instance_var
       end
     end
-  end
 
+    describe 'position' do
+      it 'is set' do
+        expect(rover.position).to eq start_pos_array
+      end
 
-  describe 'position' do
-    it 'is set' do
-      expect(rover.position).to eq start_pos_array
-    end
-    it 'can be displayed' do
-      expect(rover.display_position).to eq display_start_pos
-    end
+      it 'can be displayed' do
+        expect(rover.display_position).to eq display_start_pos
+      end
 
-    it 'can split a position to an array' do
-      rover.land_rover(start_pos, plateau)
-      expect(rover.position).to eq [0, 0, 'N']
-    end
-
-    it 'can increase along the X axis' do
-      rover.land_rover(start_pos, plateau)
-      rover.move_forward_on_x
-      expect(rover.position).to eq [1, 0, 'N']
+      it 'can increase along the X axis' do
+        rover.move_forward_on_x
+        expect(rover.position).to eq [1, 0, 'N']
+      end
     end
   end
 end
