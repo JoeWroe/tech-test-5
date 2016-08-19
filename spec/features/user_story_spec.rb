@@ -26,9 +26,7 @@ describe 'User Stories' do
     So that I can navigate a plateau,
     I'd like a navigation system with a Mars Rover." do
       nasa_controller.link_to_rover(robotic_rover)
-      expect(robotic_rover.nav_grid_active).to eq false
       nasa_controller.land_rover(start_position)
-      expect(robotic_rover.nav_grid_active).to eq true
       expect(robotic_rover.nav_grid.grid_size).to eq nav_grid_size
       expect(robotic_rover.display_position).to eq display_start_pos
     end
