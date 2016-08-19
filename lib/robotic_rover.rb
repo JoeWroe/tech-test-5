@@ -20,16 +20,20 @@ class RoboticRover
   end
 
   def display_position
+    # add error if rover is not landed.
     "Rovers position: #{position[0].to_s} #{position[1].to_s} #{position[2]}"
   end
 
   def move_forward_on_x
+    # add error if rover is not landed.
+    # refactor to #move, delagate #forward_on_x somewhere else.
     @position = [position[0] + 1, position[1], position[2]]
   end
 
   private
 
   def update_position(position)
+    # error if position not in correct format (string, 2 numbers, 1 letter)
     pos_array = split_position_to_array(position)
     @position = pos_array[0].to_i, pos_array[1].to_i, pos_array[2]
   end
