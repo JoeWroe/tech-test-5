@@ -12,7 +12,7 @@ class RoboticRover
   end
 
   def land_rover(start_position, location)
-    # add error if location argument does not have a #size attribute
+    # error if location argument does not have a #size attribute
     update_position(start_position)
     create_nav_grid(location)
     create_camera
@@ -25,7 +25,8 @@ class RoboticRover
   end
 
   def move_forward_on_x
-    # add error if rover is not landed.
+    # error if rover is not landed.
+    # error if moves outside limits of plateau#size.
     # refactor to #move, delagate #forward_on_x somewhere else.
     @position = [position[0] + 1, position[1], position[2]]
   end
@@ -34,6 +35,7 @@ class RoboticRover
 
   def update_position(position)
     # error if position not in correct format (string, 2 numbers, 1 letter)
+    # error if position is outside plateau#size limits.
     pos_array = split_position_to_array(position)
     @position = pos_array[0].to_i, pos_array[1].to_i, pos_array[2]
   end
