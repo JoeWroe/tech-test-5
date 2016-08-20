@@ -11,10 +11,11 @@ class RoboticRover
     @position = []
   end
 
-  def land_rover(start_position, location)
-    create_nav_grid(location)
+  def land_rover(start_coords, location)
+    #error if start_coords outside location#size
+    create_nav_grid(start_coords, location)
     create_camera
-    update_position(start_position)
+    update_position
     location.current_rovers << self
   end
 
@@ -32,15 +33,8 @@ class RoboticRover
 
   private
 
-  def update_position(position)
-    # error if position not in correct format (string, 2 numbers, 1 letter)
-    # error if position is outside plateau#size limits.
-    pos_array = split_position_to_array(position)
-    @position = pos_array[0].to_i, pos_array[1].to_i, pos_array[2]
-  end
-
-  def split_position_to_array(position)
-    position.split(' ')
+  def update_position
+    @position = [nav_grid.x_coord, nav_grid.y_coord, nav_grid.direction]
   end
 
   def create_camera
@@ -48,8 +42,7 @@ class RoboticRover
     camera.toggle_recording
   end
 
-  def create_nav_grid(location)
-    # error if location argument does not have a #size attribute
-    @nav_grid = NavGrid.new(location.size)
+  def create_nav_grid(start_coords, location)
+    @nav_grid = NavGrid.new(start_coords, location)
   end
 end
