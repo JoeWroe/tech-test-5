@@ -7,8 +7,12 @@ describe Plateau do
   let(:plateau_size) { '5 5' }
 
   describe 'initialization' do
-    it 'size is set' do
-      expect(plateau.size).to eq plateau_size
+    it 'has an x-limit' do
+      expect(plateau.x_limit).to eq 5
+    end
+
+    it 'has a y-limit' do
+      expect(plateau.y_limit).to eq 5
     end
 
     it 'contains no rovers' do

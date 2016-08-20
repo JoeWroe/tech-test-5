@@ -12,9 +12,9 @@ class RoboticRover
   end
 
   def land_rover(start_position, location)
-    update_position(start_position)
     create_nav_grid(location)
     create_camera
+    update_position(start_position)
     location.current_rovers << self
   end
 

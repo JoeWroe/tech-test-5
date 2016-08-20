@@ -3,7 +3,6 @@ class Camera
   attr_reader :recording
 
   def initialize
-    # can recording be made a predicate?
     @recording = false
   end
 

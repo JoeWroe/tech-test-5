@@ -3,8 +3,8 @@ require 'camera'
 describe Camera do
   subject(:camera) { described_class.new }
 
-  context 'on initialization' do
-    it 'can record but is not' do
+  describe 'initialization' do
+    it 'is not recording' do
       expect(camera.recording).to eq false
     end
   end
