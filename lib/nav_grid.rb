@@ -4,7 +4,7 @@ class NavGrid
   attr_reader :x_axis_limit, :y_axis_limit
 
   def initialize(size)
-    @x_axis_limit = size.split(' ')[0].to_i
-    @y_axis_limit = size.split(' ')[1].to_i
+    @x_axis_limit = size[0]
+    @y_axis_limit = size[1]
   end
 end

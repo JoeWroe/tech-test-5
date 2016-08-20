@@ -15,6 +15,10 @@ describe Plateau do
       expect(plateau.y_limit).to eq 5
     end
 
+    it 'has a size attribute' do
+      expect(plateau.size).to eq [5, 5]
+    end
+
     it 'contains no rovers' do
       expect(plateau.current_rovers).to eq empty_instance_var
     end
