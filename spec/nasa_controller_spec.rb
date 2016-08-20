@@ -5,7 +5,7 @@ describe NasaController do
 
   let(:robotic_rover) do
     double(:robotic_rover, land_rover: landed_rover,
-                           move_forward_on_x: display_move,
+                           move: display_move,
                            display_position: display_move)
   end
 

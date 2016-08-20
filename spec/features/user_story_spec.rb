@@ -4,18 +4,18 @@ describe 'User Stories' do
   let(:plateau)         { Plateau.new(plateau_size) }
 
   let(:empty_instance_var) { [] }
-  let(:start_position)     { '0 0 N' }
   let(:plateau_size)       { '5 5' }
-  let(:nav_grid_size)      { [5, 5] }
+  let(:start_position)     { '0 0 N' }
   let(:movement_commands)  { 'M' }
   let(:display_start_pos)  { 'Rovers position: 0 0 N' }
   let(:display_move_pos)   { 'Rovers position: 1 0 N' }
+
+  before { nasa_controller.link_to_rover(robotic_rover) }
 
   describe 'User Story One' do
     it "As a NASA controller,
     So that I can have a robotic rover on a Mars plateau,
     I'd like to be able to land a Mars Rover on the plateau." do
-      nasa_controller.link_to_rover(robotic_rover)
       expect(nasa_controller.current_rover).to eq robotic_rover
       nasa_controller.land_rover(start_position)
       expect(plateau.current_rovers).to eq [robotic_rover]
@@ -26,7 +26,6 @@ describe 'User Stories' do
     it "As a NASA controller,
     So that I can navigate a plateau,
     I'd like a navigation system with a Mars Rover." do
-      nasa_controller.link_to_rover(robotic_rover)
       nasa_controller.land_rover(start_position)
       expect(robotic_rover.nav_grid).not_to eq empty_instance_var
       expect(robotic_rover.display_position).to eq display_start_pos
@@ -37,7 +36,6 @@ describe 'User Stories' do
     it "As a NASA controller,
     So that I can send a complete view of the terrain back to earth,
     I'd like to control the on-board camera." do
-      nasa_controller.link_to_rover(robotic_rover)
       nasa_controller.land_rover(start_position)
       expect(robotic_rover.camera.recording).to eq true
     end
@@ -47,7 +45,6 @@ describe 'User Stories' do
     it "As a NASA controller,
     So that I know whereabouts on the plateau the rover is,
     I'd like the rover to have a position made up of two co-ordinates and a cardinal compass point." do
-      nasa_controller.link_to_rover(robotic_rover)
       nasa_controller.land_rover(start_position)
       expect(robotic_rover.display_position).to eq display_start_pos
     end
@@ -57,7 +54,6 @@ describe 'User Stories' do
     it "As a NASA controller,
     So that I can control the rover,
     I'd like to send it a simple string of letters which alter it's position." do
-      nasa_controller.link_to_rover(robotic_rover)
       nasa_controller.land_rover(start_position)
       expect(nasa_controller.command_input(movement_commands)).to eq display_move_pos
       # expect(robotic_rover.display_position).to eq position_after_move

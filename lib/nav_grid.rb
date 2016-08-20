@@ -9,4 +9,8 @@ class NavGrid
     @y_coord = start_coords.split(' ')[1].to_i
     @direction = start_coords.split(' ')[2]
   end
+
+  def move
+    @x_coord += 1
+  end
 end

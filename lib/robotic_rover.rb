@@ -24,11 +24,12 @@ class RoboticRover
     "Rovers position: #{position[0]} #{position[1]} #{position[2]}"
   end
 
-  def move_forward_on_x
+  def move
     # error if rover is not landed.
     # error if moves outside limits of plateau#size.
     # refactor to #move, delagate #forward_on_x somewhere else.
-    @position = [position[0] + 1, position[1], position[2]]
+    nav_grid.move
+    update_position
   end
 
   private

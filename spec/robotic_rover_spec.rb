@@ -56,8 +56,8 @@ describe RoboticRover do
         expect(rover.display_position).to eq display_start_pos
       end
 
-      it 'can increase along the X axis' do
-        rover.move_forward_on_x
+      it 'can be increased by 1 in the direction faced' do
+        rover.move
         expect(rover.position).to eq [1, 0, 'N']
       end
     end

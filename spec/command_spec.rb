@@ -3,7 +3,10 @@ require 'command'
 describe Command do
   subject(:command) { described_class.new(input, robotic_rover) }
 
-  let(:robotic_rover) { double(:robotic_rover, position: '0 0 N', move_forward_on_x: '1 0 N') }
+  let(:robotic_rover) do
+    double(:robotic_rover, position: '0 0 N',
+                           move: '1 0 N')
+  end
 
   let(:input) { 'M' }
 
