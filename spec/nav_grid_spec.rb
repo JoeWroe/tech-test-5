@@ -31,4 +31,11 @@ describe NavGrid do
       expect(nav_grid.y_coord).to eq 1
     end
   end
+
+  describe 'direction' do
+    it 'can be changed with a right turn' do
+      nav_grid.right_turn
+      expect(nav_grid.direction).to eq 'E'
+    end
+  end
 end

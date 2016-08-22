@@ -60,6 +60,13 @@ describe RoboticRover do
         rover.move
         expect(rover.position).to eq [0, 1, 'N']
       end
+
+      describe 'direction' do
+        it 'can change with a right_turn' do
+          rover.right_turn
+          expect(rover.position).to include 'E'
+        end
+      end
     end
   end
 end

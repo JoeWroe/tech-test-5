@@ -13,4 +13,8 @@ class NavGrid
   def move
     @y_coord += 1
   end
+
+  def right_turn
+    @direction = 'E'
+  end
 end
