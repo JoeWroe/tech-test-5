@@ -58,7 +58,7 @@ describe RoboticRover do
 
       it 'can be increased by 1 in the direction faced' do
         rover.move
-        expect(rover.position).to eq [1, 0, 'N']
+        expect(rover.position).to eq [0, 1, 'N']
       end
     end
   end

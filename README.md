@@ -146,11 +146,19 @@ I'd like the rover to have a position made up of two co-ordinates and a cardinal
 ```
 
 **User Story Five**
-*In order to control a rover, NASA sends a simple string of letters.*
+*In order to control a rover, NASA sends a simple string of letters... ‘L’ and ‘R’ makes the rover spin 90 degrees left or right respectively, without moving from its current spot.*
 ```
 As a NASA controller,
-So that I can control the rover,
-I'd like to send it a simple string of letters which alter it's position.
+So that I can rotate the rover,
+I'd like to send a simple string of letters which rotate it.
+```
+
+**User Story Six**
+*In order to control a rover, NASA sends a simple string of letters... ‘M’ means move forward one grid point, and maintain the same heading.*
+```
+As a NASA controller,
+So that I can advance the rover,
+I'd like to send it a simple string of letters which move it forward.
 ```
 
 ####Sequence Diagram

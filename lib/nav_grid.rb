@@ -11,6 +11,6 @@ class NavGrid
   end
 
   def move
-    @x_coord += 1
+    @y_coord += 1
   end
 end

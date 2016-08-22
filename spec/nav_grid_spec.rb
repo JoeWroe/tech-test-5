@@ -28,7 +28,7 @@ describe NavGrid do
   describe 'movement' do
     it 'can increase #x_coord when facing north' do
       nav_grid.move
-      expect(nav_grid.x_coord).to eq 1
+      expect(nav_grid.y_coord).to eq 1
     end
   end
 end
