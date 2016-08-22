@@ -8,7 +8,8 @@ class Command
   end
 
   def position_change
-    robotic_rover.move if input == 'M'
-    robotic_rover.right_turn if input == 'R'
+    return robotic_rover.move if input == 'M'
+    return robotic_rover.right_turn if input == 'R'
+    return robotic_rover.left_turn if input == 'L'
   end
 end

@@ -37,6 +37,12 @@ class RoboticRover
     update_position
   end
 
+  def left_turn
+    # error if rover is not landed.
+    nav_grid.left_turn
+    update_position
+  end
+
   private
 
   def update_position

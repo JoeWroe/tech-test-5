@@ -17,4 +17,8 @@ class NavGrid
   def right_turn
     @direction = 'E'
   end
+
+  def left_turn
+    @direction = 'W'
+  end
 end

@@ -6,33 +6,36 @@ describe Command do
   let(:robotic_rover) do
     double(:robotic_rover, position: '0 0 N',
                            move: '0 1 N',
-                           right_turn: '0 0 E')
+                           right_turn: '0 0 E',
+                           left_turn: '0 0 W')
   end
 
-  context 'advance command' do
+  describe 'advance command' do
     let(:input) { 'M' }
 
     describe 'initialization' do
-      it 'accepts an advance command' do
-        expect(command.input).to eq 'M'
-      end
-
       it 'alters a rovers position' do
         expect(command.position_change).to eq robotic_rover.move
       end
     end
   end
 
-  context 'right command' do
+  describe 'right command' do
     let(:input) { 'R' }
 
     describe 'initialization' do
-      it 'accepts a turn right command' do
-        expect(command.input).to eq 'R'
-      end
-
-      it 'alters a rovers position' do
+      it 'alters a rovers direction' do
         expect(command.position_change).to eq robotic_rover.right_turn
+      end
+    end
+  end
+
+  describe 'left command' do
+      let(:input) { 'L' }
+
+    describe 'initialization' do
+      it 'alters the rovers direction' do
+        expect(command.position_change).to eq robotic_rover.left_turn
       end
     end
   end

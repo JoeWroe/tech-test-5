@@ -37,5 +37,10 @@ describe NavGrid do
       nav_grid.right_turn
       expect(nav_grid.direction).to eq 'E'
     end
+
+    it 'can be changed with a left_turn' do
+      nav_grid.left_turn
+      expect(nav_grid.direction).to eq 'W'
+    end
   end
 end

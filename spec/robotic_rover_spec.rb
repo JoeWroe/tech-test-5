@@ -66,6 +66,11 @@ describe RoboticRover do
           rover.right_turn
           expect(rover.position).to include 'E'
         end
+
+        it 'can change with a left turn' do
+          rover.left_turn
+          expect(rover.position).to include 'W'
+        end
       end
     end
   end
