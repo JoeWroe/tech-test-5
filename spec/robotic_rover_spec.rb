@@ -70,7 +70,7 @@ describe RoboticRover do
 
         it 'can change with a left turn' do
           rover.left_turn
-          expect(rover.position).to include 'W'
+          expect(rover.position).to include an_instance_of West
         end
       end
     end

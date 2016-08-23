@@ -19,7 +19,7 @@ class NavGrid
   end
 
   def left_turn
-    @direction = 'W'
+    @direction = direction.left_turn
   end
 
   private

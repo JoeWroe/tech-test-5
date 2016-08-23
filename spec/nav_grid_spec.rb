@@ -44,7 +44,7 @@ describe NavGrid do
 
     it 'can be changed with a left_turn' do
       nav_grid.left_turn
-      expect(nav_grid.direction).to eq 'W'
+      expect(nav_grid.direction).to be_instance_of West
     end
   end
 end
