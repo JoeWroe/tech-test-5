@@ -21,7 +21,7 @@ describe NavGrid do
     end
 
     it 'sets a direction' do
-      expect(nav_grid.direction).to eq 'N'
+      expect(nav_grid.direction).to be_a Direction
     end
   end
 
@@ -33,9 +33,13 @@ describe NavGrid do
   end
 
   describe 'direction' do
+    it 'can create a direction class' do
+      expect(nav_grid.direction).to be_a Direction
+    end
+
     it 'can be changed with a right turn' do
       nav_grid.right_turn
-      expect(nav_grid.direction).to eq 'E'
+      expect(nav_grid.direction).to be_instance_of East
     end
 
     it 'can be changed with a left_turn' do

@@ -11,7 +11,6 @@ describe RoboticRover do
   let(:empty_instance_var) { [] }
   let(:landed_rover)       { [rover] }
   let(:start_pos)          { '0 0 N' }
-  let(:start_pos_array)    { [0, 0, 'N'] }
   let(:display_start_pos)  { 'Rovers position: 0 0 N' }
 
   context 'before landing' do
@@ -49,7 +48,9 @@ describe RoboticRover do
 
     describe 'position' do
       it 'is set' do
-        expect(rover.position).to eq start_pos_array
+        expect(rover.position[0]).to eq 0
+        expect(rover.position[1]).to eq 0
+        expect(rover.position[2]).to be_instance_of North
       end
 
       it 'can be displayed' do
@@ -58,13 +59,13 @@ describe RoboticRover do
 
       it 'can be increased by 1 in the direction faced' do
         rover.move
-        expect(rover.position).to eq [0, 1, 'N']
+        expect(rover.position[1]).to eq 1
       end
 
       describe 'direction' do
         it 'can change with a right_turn' do
           rover.right_turn
-          expect(rover.position).to include 'E'
+          expect(rover.position).to include an_instance_of East
         end
 
         it 'can change with a left turn' do
