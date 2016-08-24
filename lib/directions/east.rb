@@ -13,4 +13,8 @@ class East < Direction
   def left_turn
     North.new
   end
+
+  def move
+    [1, 0]
+  end
 end

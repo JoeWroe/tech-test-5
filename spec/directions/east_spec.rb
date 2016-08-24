@@ -18,4 +18,10 @@ describe East do
       expect(east.left_turn).to be_an_instance_of North
     end
   end
+
+  describe 'moving forward' do
+    it 'returns an array of the coord change' do
+      expect(east.move).to eq [1, 0]
+    end
+  end
 end

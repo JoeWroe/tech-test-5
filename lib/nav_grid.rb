@@ -11,7 +11,8 @@ class NavGrid
   end
 
   def move
-    @y_coord += 1
+    coord_change = direction.move
+    update_coords(coord_change)
   end
 
   def right_turn
@@ -26,5 +27,10 @@ class NavGrid
 
   def create_direction_class(command_input_direction)
     return North.new if command_input_direction == 'N'
+  end
+
+  def update_coords(coord_change)
+    @x_coord += coord_change[0]
+    @y_coord += coord_change[1] 
   end
 end

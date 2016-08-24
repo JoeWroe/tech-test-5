@@ -6,11 +6,10 @@ describe 'User Stories' do
   let(:empty_instance_var)  { [] }
   let(:plateau_size)        { '5 5' }
   let(:start_pos)           { '0 0 N' }
-  let(:right_360)          { 'RRRR' }
-  let(:left_360)           { 'LLLL' }
-  let(:move_commands)       { 'M' }
+  let(:right_360)           { 'RRRR' }
+  let(:left_360)            { 'LLLL' }
+  let(:forward_commands)    { 'MRMRMRMR' }
   let(:display_start_pos)   { 'Rovers position: 0 0 N' }
-  let(:display_advance_pos) { 'Rovers position: 0 1 N' }
 
   before do
     nasa_controller.link_to_rover(robotic_rover)
@@ -64,7 +63,7 @@ describe 'User Stories' do
     it "As a NASA controller,
     So that I can advance the rover,
     I'd like to send it a simple string of letters which move it forward." do
-      expect(nasa_controller.command_input(move_commands)).to eq display_advance_pos
+      expect(nasa_controller.command_input(forward_commands)).to eq display_start_pos
     end
   end
 end
