@@ -21,6 +21,7 @@ class NasaController
 
   def command_input(commands)
     # add error if commands are not in correct format
+    # add error if rover is not landed
     command_iteration(commands)
     current_rover.display_position
   end

@@ -6,11 +6,10 @@ describe 'User Stories' do
   let(:empty_instance_var)  { [] }
   let(:plateau_size)        { '5 5' }
   let(:start_pos)           { '0 0 N' }
-  let(:right_turn)          { 'R' }
-  let(:left_turn)           { 'L' }
+  let(:right_360)          { 'RRRR' }
+  let(:left_360)           { 'LLLL' }
   let(:move_commands)       { 'M' }
   let(:display_start_pos)   { 'Rovers position: 0 0 N' }
-  let(:display_right_move)  { 'Rovers position: 0 0 E' }
   let(:display_advance_pos) { 'Rovers position: 0 1 N' }
 
   before do
@@ -56,8 +55,8 @@ describe 'User Stories' do
     it "As a NASA controller,
     So that I can rotate the rover,
     I'd like to send a simple string of letters which rotate it." do
-      expect(nasa_controller.command_input(right_turn)).to eq display_right_move
-      expect(nasa_controller.command_input(left_turn)).to eq display_start_pos
+      expect(nasa_controller.command_input(right_360)).to eq display_start_pos
+      expect(nasa_controller.command_input(left_360)).to eq display_start_pos
     end
   end
 

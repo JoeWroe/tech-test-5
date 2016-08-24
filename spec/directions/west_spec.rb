@@ -9,4 +9,13 @@ describe West do
     end
   end
 
+  describe 'changing direction' do
+    it 'returns North with a #right_turn' do
+      expect(west.right_turn).to be_an_instance_of North
+    end
+
+    it 'returns South with a #left_turn' do
+      expect(west.left_turn).to be_an_instance_of South
+    end
+  end
 end

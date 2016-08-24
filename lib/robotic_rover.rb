@@ -25,20 +25,17 @@ class RoboticRover
   end
 
   def move
-    # error if rover is not landed.
     # error if moves outside limits of plateau#size.
     nav_grid.move
     update_position
   end
 
   def right_turn
-    # error if rover is not landed.
     nav_grid.right_turn
     update_position
   end
 
   def left_turn
-    # error if rover is not landed.
     nav_grid.left_turn
     update_position
   end
