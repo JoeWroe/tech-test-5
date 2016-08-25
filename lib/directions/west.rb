@@ -1,7 +1,7 @@
 require './lib/directions/direction'
 
+# A module of direction for when the Rover is facing West.
 class West < Direction
-
   def to_s
     'W'
   end

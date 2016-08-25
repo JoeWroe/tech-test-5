@@ -31,6 +31,6 @@ class NavGrid
 
   def update_coords(coord_change)
     @x_coord += coord_change[0]
-    @y_coord += coord_change[1] 
+    @y_coord += coord_change[1]
   end
 end

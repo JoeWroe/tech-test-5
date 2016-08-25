@@ -128,8 +128,8 @@
       "/Users/Joe/Library/Mobile Documents/com~apple~CloudDocs/documents/work-stuff/applications/thoughtworks/mars-rover/lib/directions/east.rb": [
         1,
         null,
-        1,
         null,
+        1,
         1,
         1,
         null,
@@ -148,6 +148,8 @@
         null
       ],
       "/Users/Joe/Library/Mobile Documents/com~apple~CloudDocs/documents/work-stuff/applications/thoughtworks/mars-rover/lib/directions/direction.rb": [
+        null,
+        null,
         1,
         null
       ],
@@ -183,8 +185,8 @@
       "/Users/Joe/Library/Mobile Documents/com~apple~CloudDocs/documents/work-stuff/applications/thoughtworks/mars-rover/lib/directions/north.rb": [
         1,
         null,
-        1,
         null,
+        1,
         1,
         7,
         null,
@@ -234,8 +236,8 @@
       "/Users/Joe/Library/Mobile Documents/com~apple~CloudDocs/documents/work-stuff/applications/thoughtworks/mars-rover/lib/directions/south.rb": [
         1,
         null,
-        1,
         null,
+        1,
         1,
         1,
         null,
@@ -285,8 +287,8 @@
       "/Users/Joe/Library/Mobile Documents/com~apple~CloudDocs/documents/work-stuff/applications/thoughtworks/mars-rover/lib/directions/west.rb": [
         1,
         null,
-        1,
         null,
+        1,
         1,
         1,
         null,
@@ -724,6 +726,6 @@
         null
       ]
     },
-    "timestamp": 1472082550
+    "timestamp": 1472097646
   }
 }

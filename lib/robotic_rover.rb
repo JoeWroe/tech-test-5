@@ -12,7 +12,7 @@ class RoboticRover
   end
 
   def land_rover(start_coords, location)
-    #error if start_coords outside location#size
+    # error if start_coords outside location#size
     create_nav_grid(start_coords, location)
     create_camera
     update_position

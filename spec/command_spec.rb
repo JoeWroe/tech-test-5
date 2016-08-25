@@ -31,7 +31,7 @@ describe Command do
   end
 
   describe 'left command' do
-      let(:input) { 'L' }
+    let(:input) { 'L' }
 
     describe 'initialization' do
       it 'alters the rovers direction' do

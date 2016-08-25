@@ -8,7 +8,7 @@ describe 'User Stories' do
   let(:start_pos)           { '0 0 N' }
   let(:right_360)           { 'RRRR' }
   let(:left_360)            { 'LLLL' }
-  let(:forward_commands)    { 'MRMRMRMR' }
+  let(:commands)            { 'MRMRMRMR' }
   let(:display_start_pos)   { 'Rovers position: 0 0 N' }
 
   before do
@@ -45,7 +45,7 @@ describe 'User Stories' do
   describe 'User Story Four' do
     it "As a NASA controller,
     So that I know whereabouts on the plateau the rover is,
-    I'd like the rover to have a position made up of two co-ordinates and a cardinal compass point." do
+    I'd like the rover to have two co-ordinates and a cardinal heading." do
       expect(robotic_rover.display_position).to eq display_start_pos
     end
   end
@@ -63,7 +63,7 @@ describe 'User Stories' do
     it "As a NASA controller,
     So that I can advance the rover,
     I'd like to send it a simple string of letters which move it forward." do
-      expect(nasa_controller.command_input(forward_commands)).to eq display_start_pos
+      expect(nasa_controller.command_input(commands)).to eq display_start_pos
     end
   end
 end

@@ -142,7 +142,7 @@ I'd like to control the on-board camera.
 ```
 As a NASA controller,
 So that I know whereabouts on the plateau the rover is,
-I'd like the rover to have a position made up of two co-ordinates and a cardinal compass point.
+I'd like the rover to have two co-ordinates and a cardinal heading."
 ```
 
 **User Story Five**

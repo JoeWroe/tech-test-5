@@ -1,7 +1,7 @@
 require './lib/directions/direction'
 
+# A module of direction for when the Rover is facing North.
 class North < Direction
-
   def to_s
     'N'
   end
