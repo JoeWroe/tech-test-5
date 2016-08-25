@@ -39,6 +39,15 @@ describe 'User Stories' do
     So that I can send a complete view of the terrain back to earth,
     I'd like to control the on-board camera." do
       expect(robotic_rover.camera.recording).to eq true
+      expect(robotic_rover.camera.direction).to be_instance_of North
+      robotic_rover.camera.rotate_to_east
+      expect(robotic_rover.camera.direction).to be_instance_of East
+      robotic_rover.camera.rotate_to_south
+      expect(robotic_rover.camera.direction).to be_instance_of South
+      robotic_rover.camera.rotate_to_west
+      expect(robotic_rover.camera.direction).to be_instance_of West
+      robotic_rover.camera.rotate_to_north
+      expect(robotic_rover.camera.direction).to be_instance_of North
     end
   end
 

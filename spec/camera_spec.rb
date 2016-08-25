@@ -1,11 +1,17 @@
 require 'camera'
 
 describe Camera do
-  subject(:camera) { described_class.new }
+  subject(:camera) { described_class.new(north) }
+
+  let(:north) { double(:north) }
 
   describe 'initialization' do
     it 'is not recording' do
       expect(camera.recording).to eq false
+    end
+
+    it 'has a direction' do
+      expect(camera.direction).to eq north
     end
   end
 

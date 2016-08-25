@@ -14,8 +14,8 @@ class RoboticRover
   def land_rover(start_coords, location)
     # error if start_coords outside location#size
     create_nav_grid(start_coords, location)
-    create_camera
     update_position
+    create_camera(position[2])
     location.current_rovers << self
   end
 
@@ -46,8 +46,8 @@ class RoboticRover
     @position = [nav_grid.x_coord, nav_grid.y_coord, nav_grid.direction]
   end
 
-  def create_camera
-    @camera = Camera.new
+  def create_camera(direction)
+    @camera = Camera.new(direction)
     camera.toggle_recording
   end
 
