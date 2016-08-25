@@ -10,4 +10,12 @@ class Camera
   def toggle_recording
     @recording = true
   end
+
+  def rotate_right
+    @direction = direction.right_turn
+  end
+
+  def rotate_left
+    @direction = direction.left_turn
+  end
 end

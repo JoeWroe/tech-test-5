@@ -40,13 +40,9 @@ describe 'User Stories' do
     I'd like to control the on-board camera." do
       expect(robotic_rover.camera.recording).to eq true
       expect(robotic_rover.camera.direction).to be_instance_of North
-      robotic_rover.camera.rotate_to_east
+      robotic_rover.camera.rotate_right
       expect(robotic_rover.camera.direction).to be_instance_of East
-      robotic_rover.camera.rotate_to_south
-      expect(robotic_rover.camera.direction).to be_instance_of South
-      robotic_rover.camera.rotate_to_west
-      expect(robotic_rover.camera.direction).to be_instance_of West
-      robotic_rover.camera.rotate_to_north
+      robotic_rover.camera.rotate_left
       expect(robotic_rover.camera.direction).to be_instance_of North
     end
   end
