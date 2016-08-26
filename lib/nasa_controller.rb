@@ -1,4 +1,5 @@
 require './lib/command'
+require './lib/errors/robotic_rover_error'
 
 # Interface for use by a NASA employee.
 class NasaController
@@ -10,7 +11,7 @@ class NasaController
   end
 
   def link_to_rover(robotic_rover)
-    # add error based on arguments type
+    raise LinkToRoverError unless robotic_rover.is_a? RoboticRover
     @current_rover = robotic_rover
   end
 

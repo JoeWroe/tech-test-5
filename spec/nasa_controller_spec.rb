@@ -4,7 +4,8 @@ describe NasaController do
   subject(:controller) { described_class.new(plateau: plateau) }
 
   let(:robotic_rover) do
-    double(:robotic_rover, land_rover: landed_rover,
+    double(:robotic_rover, is_a?: RoboticRover,
+                           land_rover: landed_rover,
                            move: display_move,
                            display_position: display_move)
   end
@@ -17,19 +18,31 @@ describe NasaController do
   let(:start_pos)    { '0 0 N' }
   let(:move_command) { 'M' }
 
+  let(:link_error) do
+    'Incorrect argument class, please link to a RoboticRover.'
+  end
+
   describe 'interacting with a rover' do
-    before { controller.link_to_rover(robotic_rover) }
+    context 'when a RoboticRover is used' do
+      before { controller.link_to_rover(robotic_rover) }
 
-    it 'can create a link' do
-      expect(controller.current_rover).to eq robotic_rover
+      it 'can create a link' do
+        expect(controller.current_rover).to eq robotic_rover
+      end
+
+      it 'can land a rover' do
+        expect(controller.land_rover(start_pos)).to eq plateau.rover_landed
+      end
+
+      it 'can read a command input' do
+        expect(controller.command_input(move_command)).to eq display_move
+      end
     end
 
-    it 'can land a rover' do
-      expect(controller.land_rover(start_pos)).to eq plateau.rover_landed
-    end
-
-    it 'can read a command input' do
-      expect(controller.command_input(move_command)).to eq display_move
+    context 'when something other than a RoboticRover is used' do
+      it 'raises an error at #link_to_rover' do
+        expect { controller.link_to_rover(plateau) }.to raise_error link_error
+      end
     end
   end
 end
