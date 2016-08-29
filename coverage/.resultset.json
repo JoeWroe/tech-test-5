@@ -437,7 +437,9 @@
         2,
         null,
         1,
-        1,
+        null,
+        null,
+        0,
         null,
         null,
         1,
@@ -506,7 +508,7 @@
         null,
         null
       ],
-      "/Users/Joe/Library/Mobile Documents/com~apple~CloudDocs/documents/work-stuff/applications/thoughtworks/mars-rover/lib/errors/robotic_rover_error.rb": [
+      "/Users/Joe/Library/Mobile Documents/com~apple~CloudDocs/documents/work-stuff/applications/thoughtworks/mars-rover/lib/errors/nasa_controller_error.rb": [
         null,
         1,
         null,
@@ -514,6 +516,12 @@
         1,
         1,
         1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        0,
         null,
         null
       ],
@@ -789,6 +797,6 @@
         null
       ]
     },
-    "timestamp": 1472235434
+    "timestamp": 1472501335
   }
 }

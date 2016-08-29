@@ -1,5 +1,5 @@
 require './lib/command'
-require './lib/errors/robotic_rover_error'
+require './lib/errors/nasa_controller_error'
 
 # Interface for use by a NASA employee.
 class NasaController
