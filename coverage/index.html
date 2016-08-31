@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-08-29T21:08:55+01:00">2016-08-29T21:08:55+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-08-31T13:53:04+01:00">2016-08-31T13:53:04+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">99.49%</span></span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.1
+         3.09
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>23</b> files in total.
-    <b>393</b> relevant lines. 
-    <span class="green"><b>391</b> lines covered</span> and
-    <span class="red"><b>2</b> lines missed </span>
+    <b>24</b> files in total.
+    <b>398</b> relevant lines. 
+    <span class="green"><b>398</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -122,12 +122,12 @@
       
       <tr>
         <td class="strong"><a href="#b8e5db9902c9eceaf2d3cc3a407f1b1ee9f08f0b" class="src_link" title="lib/errors/nasa_controller_error.rb">lib/errors/nasa_controller_error.rb</a></td>
-        <td class="yellow strong">83.33 %</td>
+        <td class="green strong">100.0 %</td>
         <td>15</td>
         <td>6</td>
-        <td>5</td>
-        <td>1</td>
-        <td>0.8</td>
+        <td>6</td>
+        <td>0</td>
+        <td>1.2</td>
       </tr>
       
       <tr>
@@ -231,6 +231,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#363fa6ef48f7c2af4b9aa17d63f76aa018d6d1d5" class="src_link" title="spec/errors/nasa_controller_error_spec.rb">spec/errors/nasa_controller_error_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>17</td>
+        <td>8</td>
+        <td>8</td>
+        <td>0</td>
+        <td>1.1</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#4b62f72c8c08ef2bedae04fb8e98046745f97968" class="src_link" title="spec/features/user_story_spec.rb">spec/features/user_story_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>74</td>
@@ -242,12 +252,12 @@
       
       <tr>
         <td class="strong"><a href="#eaaf8553d414741ef1c1aa5e1080cc58ea3cf7b1" class="src_link" title="spec/nasa_controller_spec.rb">spec/nasa_controller_spec.rb</a></td>
-        <td class="green strong">95.83 %</td>
-        <td>50</td>
-        <td>24</td>
-        <td>23</td>
-        <td>1</td>
-        <td>1.9</td>
+        <td class="green strong">100.0 %</td>
+        <td>42</td>
+        <td>21</td>
+        <td>21</td>
+        <td>0</td>
+        <td>2.1</td>
       </tr>
       
       <tr>
@@ -1145,11 +1155,11 @@
         <div class="source_table" id="b8e5db9902c9eceaf2d3cc3a407f1b1ee9f08f0b">
   <div class="header">
     <h3>lib/errors/nasa_controller_error.rb</h3>
-    <h4><span class="yellow">83.33 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>6</b> relevant lines. 
-      <span class="green"><b>5</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="green"><b>6</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -1183,7 +1193,7 @@
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">class LinkToRoverError &lt; NasaControllerError</code>
+          <code class="ruby">class RoverLinkError &lt; NasaControllerError</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="6">
@@ -1192,8 +1202,8 @@
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="7">
+          <span class="hits">2</span>
           
           <code class="ruby">    super</code>
         </li>
@@ -1216,19 +1226,19 @@
           <code class="ruby">  def message</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    &#39;Incorrect argument error, &#39; +</code>
+          <code class="ruby">    &#39;Incorrect argument error, &#39; \</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
           
           
-          <code class="ruby">    &#39;the argument passed into this method needs to be of a specific class, &#39; +</code>
+          <code class="ruby">    &#39;the argument passed into this method needs to be of a specific class, &#39; \</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">    &#39;please link to an instance of the RoboticRover class.&#39;</code>
@@ -1345,7 +1355,7 @@
         <li class="covered" data-hits="10" data-linenumber="14">
           <span class="hits">10</span>
           
-          <code class="ruby">    raise LinkToRoverError unless robotic_rover.is_a? RoboticRover</code>
+          <code class="ruby">    raise RoverLinkError unless robotic_rover.is_a? RoboticRover</code>
         </li>
       
         <li class="covered" data-hits="9" data-linenumber="15">
@@ -3446,6 +3456,126 @@
   </pre>
 </div>
       
+        <div class="source_table" id="363fa6ef48f7c2af4b9aa17d63f76aa018d6d1d5">
+  <div class="header">
+    <h3>spec/errors/nasa_controller_error_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;errors/nasa_controller_error&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe NasaControllerError do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="4">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  let(:rover_link_error) { RoverLinkError.new }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;RoverLinkError sub-......&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    let(:error_message) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      &#39;Incorrect argument error, &#39; \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">      &#39;the argument passed into this method needs to be of a specific class, &#39; \</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">      &#39;please link to an instance of the RoboticRover class.&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;returns a bespoke message&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(rover_link_error.message).to eq error_message</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
         <div class="source_table" id="4b62f72c8c08ef2bedae04fb8e98046745f97968">
   <div class="header">
     <h3>spec/features/user_story_spec.rb</h3>
@@ -3911,11 +4041,11 @@
         <div class="source_table" id="eaaf8553d414741ef1c1aa5e1080cc58ea3cf7b1">
   <div class="header">
     <h3>spec/nasa_controller_spec.rb</h3>
-    <h4><span class="green">95.83 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>24</b> relevant lines. 
-      <span class="green"><b>23</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <b>21</b> relevant lines. 
+      <span class="green"><b>21</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -4045,178 +4175,130 @@
         <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
-          <code class="ruby">  let(:link_error) do</code>
+          <code class="ruby">  describe &#39;interacting with a rover&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="covered" data-hits="4" data-linenumber="22">
+          <span class="hits">4</span>
           
-          
-          <code class="ruby">    &#39;Incorrect argument error, &#39; +</code>
+          <code class="ruby">    before { controller.link_to_rover(robotic_rover) }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="23">
           
           
-          <code class="ruby">    &#39;the argument passed into this method needs to be of a specific class, &#39; +</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="24">
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    &#39;please link to an instance of the RoboticRover class.&#39;</code>
+          <code class="ruby">    it &#39;can create a link&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">      expect(controller.current_rover).to eq robotic_rover</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="27">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="27">
           
-          <code class="ruby">  describe &#39;interacting with a rover&#39; do</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="28">
           <span class="hits">1</span>
           
-          <code class="ruby">    context &#39;when a RoboticRover is used&#39; do</code>
+          <code class="ruby">    it &#39;can land a rover&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="29">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
           
-          <code class="ruby">      before { controller.link_to_rover(robotic_rover) }</code>
+          <code class="ruby">      expect(controller.land_rover(start_pos)).to eq plateau.rover_landed</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="30">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="31">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="31">
           
-          <code class="ruby">      it &#39;can create a link&#39; do</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="32">
           <span class="hits">1</span>
           
-          <code class="ruby">        expect(controller.current_rover).to eq robotic_rover</code>
+          <code class="ruby">    it &#39;can read a command input&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="covered" data-hits="1" data-linenumber="33">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      end</code>
+          <code class="ruby">      expect(controller.command_input(move_command)).to eq display_move</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="34">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="35">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      it &#39;can land a rover&#39; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="36">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        expect(controller.land_rover(start_pos)).to eq plateau.rover_landed</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="37">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="38">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="39">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      it &#39;can read a command input&#39; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="40">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        expect(controller.command_input(move_command)).to eq display_move</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="41">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="42">
-          
-          
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="44">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    context &#39;when something other than a RoboticRover is used&#39; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="45">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      it &#39;raises an error at #link_to_rover&#39; do</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="46">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        expect { controller.link_to_rover(plateau) }.to raise_error LinkToRoverError</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="47">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="48">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="49">
+        <li class="never" data-hits="" data-linenumber="35">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="37">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;Exceptions&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="38">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;raises an error at #link_to_rover&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="39">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      expect { controller.link_to_rover(plateau) }.to raise_error RoverLinkError</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
           
           
           <code class="ruby">end</code>

@@ -18,12 +18,6 @@ describe NasaController do
   let(:start_pos)    { '0 0 N' }
   let(:move_command) { 'M' }
 
-  let(:link_error) do
-    'Incorrect argument error, ' +
-    'the argument passed into this method needs to be of a specific class, ' +
-    'please link to an instance of the RoboticRover class.'
-  end
-
   describe 'interacting with a rover' do
     before { controller.link_to_rover(robotic_rover) }
 
@@ -42,7 +36,7 @@ describe NasaController do
 
   describe 'Exceptions' do
     it 'raises an error at #link_to_rover' do
-      expect { controller.link_to_rover(plateau) }.to raise_error LinkToRoverError
+      expect { controller.link_to_rover(plateau) }.to raise_error RoverLinkError
     end
   end
 end

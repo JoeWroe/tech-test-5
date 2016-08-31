@@ -339,6 +339,42 @@
         null,
         null
       ],
+      "/Users/Joe/Library/Mobile Documents/com~apple~CloudDocs/documents/work-stuff/applications/thoughtworks/mars-rover/spec/errors/nasa_controller_error_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/Joe/Library/Mobile Documents/com~apple~CloudDocs/documents/work-stuff/applications/thoughtworks/mars-rover/lib/errors/nasa_controller_error.rb": [
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/Joe/Library/Mobile Documents/com~apple~CloudDocs/documents/work-stuff/applications/thoughtworks/mars-rover/spec/features/user_story_spec.rb": [
         1,
         7,
@@ -437,13 +473,6 @@
         2,
         null,
         1,
-        null,
-        null,
-        0,
-        null,
-        null,
-        1,
-        1,
         4,
         null,
         1,
@@ -462,7 +491,6 @@
         1,
         1,
         2,
-        null,
         null,
         null,
         null
@@ -505,23 +533,6 @@
         null,
         17,
         null,
-        null,
-        null
-      ],
-      "/Users/Joe/Library/Mobile Documents/com~apple~CloudDocs/documents/work-stuff/applications/thoughtworks/mars-rover/lib/errors/nasa_controller_error.rb": [
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        0,
         null,
         null
       ],
@@ -797,6 +808,6 @@
         null
       ]
     },
-    "timestamp": 1472501335
+    "timestamp": 1472647984
   }
 }

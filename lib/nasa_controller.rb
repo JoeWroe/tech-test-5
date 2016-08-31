@@ -11,7 +11,7 @@ class NasaController
   end
 
   def link_to_rover(robotic_rover)
-    raise LinkToRoverError unless robotic_rover.is_a? RoboticRover
+    raise RoverLinkError unless robotic_rover.is_a? RoboticRover
     @current_rover = robotic_rover
   end
 
