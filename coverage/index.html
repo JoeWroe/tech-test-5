@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-03T16:20:25+01:00">2016-09-03T16:20:25+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-03T17:08:05+01:00">2016-09-03T17:08:05+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.03
+         3.01
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>26</b> files in total.
-    <b>436</b> relevant lines. 
-    <span class="green"><b>436</b> lines covered</span> and
+    <b>444</b> relevant lines. 
+    <span class="green"><b>444</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -127,7 +127,7 @@
         <td>16</td>
         <td>16</td>
         <td>0</td>
-        <td>1.1</td>
+        <td>1.2</td>
       </tr>
       
       <tr>
@@ -137,7 +137,7 @@
         <td>3</td>
         <td>3</td>
         <td>0</td>
-        <td>3.3</td>
+        <td>4.0</td>
       </tr>
       
       <tr>
@@ -263,11 +263,11 @@
       <tr>
         <td class="strong"><a href="#474c0eec02a824cd824f1fb88f92074729d0467f" class="src_link" title="spec/format_checkers/format_checker_spec.rb">spec/format_checkers/format_checker_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>5</td>
-        <td>2</td>
-        <td>2</td>
+        <td>19</td>
+        <td>10</td>
+        <td>10</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>1.4</td>
       </tr>
       
       <tr>
@@ -1366,8 +1366,8 @@
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="31">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="31">
+          <span class="hits">2</span>
           
           <code class="ruby">    super</code>
         </li>
@@ -1468,10 +1468,10 @@
           <code class="ruby">  def check_format(input)</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="5">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="10" data-linenumber="5">
+          <span class="hits">10</span>
           
-          <code class="ruby">    true</code>
+          <code class="ruby">    /[0-9]\s[0-9]\s[NESW]/.match(input) ? true : false    </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
@@ -1630,8 +1630,8 @@
           <code class="ruby">    raise LandInputError unless correct_format?(start_position)</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="22">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="7" data-linenumber="22">
+          <span class="hits">7</span>
           
           <code class="ruby">    current_rover.land_rover(start_position, plateau)</code>
         </li>
@@ -4477,8 +4477,8 @@
     <h3>spec/format_checkers/format_checker_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>2</b> relevant lines. 
-      <span class="green"><b>2</b> lines covered</span> and
+      <b>10</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -4504,13 +4504,97 @@
           <code class="ruby">describe FormatChecker do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="covered" data-hits="3" data-linenumber="4">
+          <span class="hits">3</span>
+          
+          <code class="ruby">  subject(:format_checker) { described_class.new }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="covered" data-hits="2" data-linenumber="6">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  let(:correct_input)   { &#39;1 2 N&#39; }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="7">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  let(:incorrect_input) { &#39;N£ 9 &#39; }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;checking a format&#39; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns true if a format is &#39;Integer Integer Direction&#39;&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(format_checker.check_format(correct_input)).to eq true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns false if a format is not &#39;Integer Integer Direction&#39;&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(format_checker.check_format(incorrect_input)).to eq false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby">end</code>

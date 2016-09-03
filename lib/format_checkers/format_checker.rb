@@ -2,6 +2,6 @@
 class FormatChecker
 
   def check_format(input)
-    true
+    /[0-9]\s[0-9]\s[NESW]/.match(input) ? true : false    
   end
 end
