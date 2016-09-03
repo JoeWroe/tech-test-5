@@ -16,7 +16,8 @@ class NasaController
   end
 
   def land_rover(start_position)
-    # add error if start_position is not in correct format
+    raise NoRoverLinkedError unless current_rover.is_a? RoboticRover
+    raise LandInputError unless correct_format?(start_position)
     current_rover.land_rover(start_position, plateau)
   end
 
@@ -35,5 +36,9 @@ class NasaController
       # is the position change a responsibility of #command_iteration?
       new_command_class.position_change
     end
+  end
+
+  def correct_format?(input)
+    true
   end
 end

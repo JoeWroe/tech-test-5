@@ -35,8 +35,17 @@ describe NasaController do
   end
 
   describe 'Exceptions' do
-    it 'raises an error at #link_to_rover' do
+    it 'raises an exception at #link_to_rover' do
       expect { controller.link_to_rover(plateau) }.to raise_error RoverLinkError
+    end
+
+    it 'raises an exception if not linked to a rover' do
+      expect { controller.land_rover("") }.to raise_error NoRoverLinkedError
+    end
+
+    it 'raises an exception if start position input is in the wrong format' do
+      controller.link_to_rover(robotic_rover)
+      expect { controller.land_rover("") }.to raise_error LandInputError
     end
   end
 end
