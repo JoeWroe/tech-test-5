@@ -503,6 +503,22 @@
         null,
         null
       ],
+      "/Users/Joe/Library/Mobile Documents/com~apple~CloudDocs/documents/work-stuff/applications/thoughtworks/mars-rover/spec/format_checkers/format_checker_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/Joe/Library/Mobile Documents/com~apple~CloudDocs/documents/work-stuff/applications/thoughtworks/mars-rover/lib/format_checkers/format_checker.rb": [
+        null,
+        1,
+        null,
+        1,
+        8,
+        null,
+        null
+      ],
       "/Users/Joe/Library/Mobile Documents/com~apple~CloudDocs/documents/work-stuff/applications/thoughtworks/mars-rover/spec/nasa_controller_spec.rb": [
         1,
         null,
@@ -559,6 +575,7 @@
       "/Users/Joe/Library/Mobile Documents/com~apple~CloudDocs/documents/work-stuff/applications/thoughtworks/mars-rover/lib/nasa_controller.rb": [
         1,
         1,
+        1,
         null,
         null,
         1,
@@ -598,6 +615,7 @@
         null,
         null,
         1,
+        8,
         8,
         null,
         null
@@ -874,6 +892,6 @@
         null
       ]
     },
-    "timestamp": 1472915056
+    "timestamp": 1472916025
   }
 }

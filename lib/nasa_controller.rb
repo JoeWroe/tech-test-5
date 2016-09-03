@@ -1,4 +1,5 @@
 require './lib/command'
+require './lib/format_checkers/format_checker'
 require './lib/errors/nasa_controller_error'
 
 # Interface for use by a NASA employee.
@@ -39,6 +40,7 @@ class NasaController
   end
 
   def correct_format?(input)
-    true
+    new_format_checker_class = FormatChecker.new
+    new_format_checker_class.check_format(input)
   end
 end

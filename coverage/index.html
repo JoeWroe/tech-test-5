@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-03T16:04:16+01:00">2016-09-03T16:04:16+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-03T16:20:25+01:00">2016-09-03T16:20:25+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -31,9 +31,9 @@
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>24</b> files in total.
-    <b>429</b> relevant lines. 
-    <span class="green"><b>429</b> lines covered</span> and
+    <b>26</b> files in total.
+    <b>436</b> relevant lines. 
+    <span class="green"><b>436</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -131,13 +131,23 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#d9ea2991ffa934785c4cc7b05dc97b9cfe011536" class="src_link" title="lib/format_checkers/format_checker.rb">lib/format_checkers/format_checker.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>7</td>
+        <td>3</td>
+        <td>3</td>
+        <td>0</td>
+        <td>3.3</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#94cc52331b59dc130c089f16939664601b7297be" class="src_link" title="lib/nasa_controller.rb">lib/nasa_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>44</td>
-        <td>24</td>
-        <td>24</td>
+        <td>46</td>
+        <td>26</td>
+        <td>26</td>
         <td>0</td>
-        <td>5.6</td>
+        <td>5.5</td>
       </tr>
       
       <tr>
@@ -248,6 +258,16 @@
         <td>40</td>
         <td>0</td>
         <td>2.2</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#474c0eec02a824cd824f1fb88f92074729d0467f" class="src_link" title="spec/format_checkers/format_checker_spec.rb">spec/format_checkers/format_checker_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>5</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -1410,13 +1430,73 @@
   </pre>
 </div>
       
+        <div class="source_table" id="d9ea2991ffa934785c4cc7b05dc97b9cfe011536">
+  <div class="header">
+    <h3>lib/format_checkers/format_checker.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="never" data-hits="" data-linenumber="1">
+          
+          
+          <code class="ruby"># A class for checking the format of inputs</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class FormatChecker</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def check_format(input)</code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="5">
+          <span class="hits">8</span>
+          
+          <code class="ruby">    true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
         <div class="source_table" id="94cc52331b59dc130c089f16939664601b7297be">
   <div class="header">
     <h3>lib/nasa_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>24</b> relevant lines. 
-      <span class="green"><b>24</b> lines covered</span> and
+      <b>26</b> relevant lines. 
+      <span class="green"><b>26</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1433,256 +1513,268 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">require &#39;./lib/errors/nasa_controller_error&#39;</code>
+          <code class="ruby">require &#39;./lib/format_checkers/format_checker&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="3">
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">require &#39;./lib/errors/nasa_controller_error&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
           
           
-          <code class="ruby"># Interface for use by a NASA employee.</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="5">
           
-          <code class="ruby">class NasaController</code>
+          
+          <code class="ruby"># Interface for use by a NASA employee.</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
+          <code class="ruby">class NasaController</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
           <code class="ruby">  attr_reader :plateau, :current_rover</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
+        <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
           <code class="ruby">  def initialize(plateau:)</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="9">
+        <li class="covered" data-hits="12" data-linenumber="10">
           <span class="hits">12</span>
           
           <code class="ruby">    @plateau = plateau</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="10">
+        <li class="covered" data-hits="12" data-linenumber="11">
           <span class="hits">12</span>
           
           <code class="ruby">    @current_rover = []</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
+        <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
           <code class="ruby">  def link_to_rover(robotic_rover)</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="14">
+        <li class="covered" data-hits="11" data-linenumber="15">
           <span class="hits">11</span>
           
           <code class="ruby">    raise RoverLinkError unless robotic_rover.is_a? RoboticRover</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="15">
+        <li class="covered" data-hits="10" data-linenumber="16">
           <span class="hits">10</span>
           
           <code class="ruby">    @current_rover = robotic_rover</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
+        <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
           <code class="ruby">  def land_rover(start_position)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="19">
+        <li class="covered" data-hits="9" data-linenumber="20">
           <span class="hits">9</span>
           
           <code class="ruby">    raise NoRoverLinkedError unless current_rover.is_a? RoboticRover</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="20">
+        <li class="covered" data-hits="8" data-linenumber="21">
           <span class="hits">8</span>
           
           <code class="ruby">    raise LandInputError unless correct_format?(start_position)</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="21">
+        <li class="covered" data-hits="8" data-linenumber="22">
           <span class="hits">8</span>
           
           <code class="ruby">    current_rover.land_rover(start_position, plateau)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="24">
+        <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
           <code class="ruby">  def command_input(commands)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">    # add error if commands are not in correct format</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="26">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby">    # add error if rover is not landed</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="27">
+        <li class="covered" data-hits="4" data-linenumber="28">
           <span class="hits">4</span>
           
           <code class="ruby">    command_iteration(commands)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="28">
+        <li class="covered" data-hits="4" data-linenumber="29">
           <span class="hits">4</span>
           
           <code class="ruby">    current_rover.display_position</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="30">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="31">
+        <li class="covered" data-hits="1" data-linenumber="32">
           <span class="hits">1</span>
           
           <code class="ruby">  private</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="33">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="33">
+        <li class="covered" data-hits="1" data-linenumber="34">
           <span class="hits">1</span>
           
           <code class="ruby">  def command_iteration(commands)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="34">
+        <li class="covered" data-hits="4" data-linenumber="35">
           <span class="hits">4</span>
           
           <code class="ruby">    commands.split(&#39;&#39;).each do |command|</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="35">
+        <li class="covered" data-hits="17" data-linenumber="36">
           <span class="hits">17</span>
           
           <code class="ruby">      new_command_class = Command.new(command, current_rover)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="36">
+        <li class="never" data-hits="" data-linenumber="37">
           
           
           <code class="ruby">      # is the position change a responsibility of #command_iteration?</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="37">
+        <li class="covered" data-hits="17" data-linenumber="38">
           <span class="hits">17</span>
           
           <code class="ruby">      new_command_class.position_change</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="38">
+        <li class="never" data-hits="" data-linenumber="39">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="never" data-hits="" data-linenumber="40">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="41">
+        <li class="covered" data-hits="1" data-linenumber="42">
           <span class="hits">1</span>
           
           <code class="ruby">  def correct_format?(input)</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="42">
+        <li class="covered" data-hits="8" data-linenumber="43">
           <span class="hits">8</span>
           
-          <code class="ruby">    true</code>
+          <code class="ruby">    new_format_checker_class = FormatChecker.new</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="covered" data-hits="8" data-linenumber="44">
+          <span class="hits">8</span>
+          
+          <code class="ruby">    new_format_checker_class.check_format(input)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="never" data-hits="" data-linenumber="46">
           
           
           <code class="ruby">end</code>
@@ -4371,6 +4463,54 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="74">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="474c0eec02a824cd824f1fb88f92074729d0467f">
+  <div class="header">
+    <h3>spec/format_checkers/format_checker_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>2</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;format_checkers/format_checker&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe FormatChecker do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby">end</code>
