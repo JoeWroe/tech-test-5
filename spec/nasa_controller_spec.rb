@@ -35,7 +35,7 @@ describe NasaController do
   end
 
   describe 'Exceptions' do
-    it 'raises an exception at #link_to_rover' do
+    it 'raises an exception linked to something other than a rover' do
       expect { controller.link_to_rover(plateau) }.to raise_error RoverLinkError
     end
 
