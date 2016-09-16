@@ -16,7 +16,7 @@ class App
 
   def create_plateau
     raise NoInputError if interpreter.input_strings == []
-    raise PlateauSizeError unless interpreter.find_plateau_size
+    raise PlateauSizeError if interpreter.find_plateau_size == ''
     @plateau = Plateau.new(interpreter.find_plateau_size)
   end
 

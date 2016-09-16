@@ -20,9 +20,9 @@ describe InputInterpreter do
       expect(interpreter.find_plateau_size).to eq '5 5'
     end
 
-    it 'can raise false if no plateau size command is given' do
+    it 'returns an empty string if no plateau size command is given' do
       interpreter.parse_input(bad_input_file)
-      expect(interpreter.find_plateau_size).to eq false
+      expect(interpreter.find_plateau_size).to eq ''
     end
   end
 
