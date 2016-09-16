@@ -25,4 +25,11 @@ describe InputInterpreter do
       expect(interpreter.find_plateau_size).to eq false
     end
   end
+
+  xdescribe 'identifying when new rovers are required' do
+    it 'can identify a land command' do
+      interpreter.parse_input(input_file)
+      expect(interpreter.find_rovers).to eq RoboticRover
+    end
+  end
 end

@@ -14,8 +14,15 @@ class InputInterpreter
   end
 
   def find_plateau_size
-    input_strings.each do |command|
-      return /[0-9]\s[0-9]/.match(command) ? command : false
-    end
+    input_strings.select do |command|
+      command.match(/[0-9]\s[0-9]$/)
+    end.join('')
   end
+
+  # def find_rovers
+  #   input_strings.each do |command|
+  #     RoboticRover.new if command.match(/[0-9]\s[0-9]\s[NSEW]$/)
+  #     # /[0-9]\s[0-9]\s[NSEW]$/.match(command) ? RoboticRover.new : false
+  #   end
+  # end
 end

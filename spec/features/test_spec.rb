@@ -18,5 +18,17 @@ describe App do
       app.parse_file(bad_input_file)
       expect { app.create_plateau }.to raise_error PlateauSizeError
     end
+
+    it "should raise an error if no file has been parsed" do
+      expect { app.create_plateau }.to raise_error NoInputError
+    end
+  end
+
+  xdescribe 'Interpreting a land rover command' do
+    it 'should read an input and create a rover for each land command' do
+      app.parse_file(input_file)
+      app.create_rover_list
+      expect(app.rover_list).to include(RoboticRover, RoboticRover)
+    end
   end
 end

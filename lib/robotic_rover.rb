@@ -47,6 +47,7 @@ class RoboticRover
   end
 
   def create_camera(direction)
+    # Can this creation be moved to initialization?
     @camera = Camera.new(direction)
     camera.toggle_recording
   end

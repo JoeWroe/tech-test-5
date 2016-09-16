@@ -13,3 +13,15 @@ class PlateauSizeError < AppError
     "a plateau size must use the format 'Integer Integer'."
   end
 end
+
+class NoInputError < AppError
+  def initialize
+    super
+  end
+
+  def message
+    'No input detected, ' \
+    'an input must be provided and then parsed, ' \
+    'please run `app.parse_file(input_file)`.'
+  end
+end
