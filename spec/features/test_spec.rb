@@ -24,7 +24,7 @@ describe App do
     end
   end
 
-  xdescribe 'Interpreting a land rover command' do
+  describe 'Interpreting a land rover command' do
     it 'should read an input and create a rover for each land command' do
       app.parse_file(input_file)
       app.create_rover_list

@@ -21,6 +21,12 @@ class App
   end
 
   def create_rover_list
-    @rover_list = interpreter.find_rovers
+    landings.each { |landing| @rover_list << RoboticRover.new }
+  end
+
+  private
+
+  def landings
+    interpreter.find_rover_landings
   end
 end
