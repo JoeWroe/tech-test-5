@@ -13,4 +13,5 @@ task :run do
   app = App.new(interpreter)
   app.parse_file
   app.create_plateau
+  app.create_rover_list
 end

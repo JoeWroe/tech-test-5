@@ -21,6 +21,7 @@ class App
   end
 
   def create_rover_list
+    raise NoLandCommandError if landings == []
     landings.each { |landing| @rover_list << RoboticRover.new }
   end
 

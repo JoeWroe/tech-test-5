@@ -14,6 +14,21 @@ class PlateauSizeError < AppError
   end
 end
 
+class NoLandCommandError < AppError
+  def initialize
+    super
+  end
+
+  def message
+    'No land command detected, ' \
+    'the input file pased into #parse_input must contain a land command, ' \
+    "a land command must use the format 'Integer Integer Cardinal-Direction'."
+  end
+end
+
+
+
+
 class NoInputError < AppError
   def initialize
     super
