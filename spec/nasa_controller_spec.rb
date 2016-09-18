@@ -45,12 +45,12 @@ describe NasaController do
     end
 
     it 'not linked to a rover' do
-      expect { controller.land_rover("") }.to raise_error NoRoverLinkedError
+      expect { controller.land_rover('') }.to raise_error NoRoverLinkedError
     end
 
     it 'raises an exception if start position input is in the wrong format' do
       controller.link_to_rover(robotic_rover)
-      expect { controller.land_rover("") }.to raise_error LandInputError
+      expect { controller.land_rover('') }.to raise_error LandInputError
     end
   end
 end

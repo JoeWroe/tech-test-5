@@ -7,7 +7,6 @@ describe FormatChecker do
   let(:incorrect_input) { 'N£ 9 ' }
 
   describe 'checking a format' do
-
     it "returns true if a format is 'Integer Integer Direction'" do
       expect(format_checker.check_format(correct_input)).to eq true
     end

@@ -41,13 +41,13 @@ describe NavGrid do
       nav_grid.right_turn
       nav_grid.right_turn
       nav_grid.move
-      expect(nav_grid.y_coord).to eq -1
+      expect(nav_grid.y_coord).to eq(-1)
     end
 
     it 'can decrease #x_coord when facing west' do
       nav_grid.left_turn
       nav_grid.move
-      expect(nav_grid.x_coord).to eq -1
+      expect(nav_grid.x_coord).to eq(-1)
     end
   end
 

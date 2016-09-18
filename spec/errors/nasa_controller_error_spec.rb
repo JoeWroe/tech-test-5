@@ -1,7 +1,6 @@
 require 'errors/nasa_controller_error'
 
 describe NasaControllerError do
-
   describe 'RoverLinkError sub-class' do
     let(:error) { RoverLinkError.new }
 

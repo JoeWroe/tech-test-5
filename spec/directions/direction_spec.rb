@@ -19,6 +19,5 @@ describe Direction do
     it 'passed move' do
       expect { direction.move }.to raise_error NotImplementedError
     end
-
   end
 end

@@ -25,7 +25,7 @@ describe App do
       expect(app.plateau.size).to eq [5, 5]
     end
 
-    it "should raise an error if no plateau size is provided" do
+    it 'should raise an error if no plateau size is provided' do
       app.parse_file(bad_input_file)
       expect { app.create_plateau }.to raise_error PlateauSizeError
     end

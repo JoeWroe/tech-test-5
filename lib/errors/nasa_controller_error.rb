@@ -2,6 +2,8 @@
 class NasaControllerError < StandardError
 end
 
+# A bespoke error message for when a link is attemped to something other than
+# a rover.
 class RoverLinkError < NasaControllerError
   def initialize
     super
@@ -14,6 +16,8 @@ class RoverLinkError < NasaControllerError
   end
 end
 
+# A bespoke error message for when commands are run that need a linked rover,
+# but there is no rover linked.
 class NoRoverLinkedError < NasaControllerError
   def initialize
     super
@@ -26,6 +30,7 @@ class NoRoverLinkedError < NasaControllerError
   end
 end
 
+# A bespoke error message for when the land command is in the wrong format.
 class LandInputError < NasaControllerError
   def initialize
     super
@@ -39,6 +44,8 @@ class LandInputError < NasaControllerError
   end
 end
 
+# A bespoke error message for when movement commands are passed to a rover that
+# is not already landed.
 class NoRoverLandedError < NasaControllerError
   def initialize
     super

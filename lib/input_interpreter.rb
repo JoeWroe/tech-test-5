@@ -1,6 +1,5 @@
 # A class to parse an input passed in via a test file
 class InputInterpreter
-
   attr_reader :input_strings
 
   def initialize

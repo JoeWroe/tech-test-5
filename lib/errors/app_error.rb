@@ -2,6 +2,8 @@
 class AppError < StandardError
 end
 
+# A bespoke error message for when an input file does not contain a plateau
+# size command
 class PlateauSizeError < AppError
   def initialize
     super
@@ -14,6 +16,8 @@ class PlateauSizeError < AppError
   end
 end
 
+# A bespoke error message for when an input file does not contain any land
+# commands
 class NoLandCommandError < AppError
   def initialize
     super
@@ -26,6 +30,8 @@ class NoLandCommandError < AppError
   end
 end
 
+# A bespoke error message for when an input file does not contain any
+# movement commands
 class NoMovementCommandError < AppError
   def initialize
     super
@@ -39,6 +45,8 @@ class NoMovementCommandError < AppError
   end
 end
 
+# A bespoke error message for when an attempt is made to create a controller
+# without a plateau being defined first.
 class NoPlateauCreatedError < AppError
   def initialize
     super

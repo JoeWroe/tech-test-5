@@ -3,6 +3,8 @@ require './lib/nasa_controller'
 require './lib/robotic_rover'
 require './lib/errors/app_error'
 
+# Extracts commands that could be used into one file so they can all be run
+# from the same place.
 class App
   attr_reader :interpreter, :plateau, :controller, :rover_list
 
@@ -29,7 +31,7 @@ class App
 
   def create_rover_list
     raise NoLandCommandError if landings == []
-    landings.each { |landing| @rover_list << RoboticRover.new }
+    landings.each { @rover_list << RoboticRover.new }
   end
 
   def run_rovers
