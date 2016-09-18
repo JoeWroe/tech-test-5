@@ -1,3 +1,5 @@
+require './lib/directions/north'
+
 # When a rover lands, it needs some means of handling it's position. This is
 # managed by the following class.
 class NavGrid

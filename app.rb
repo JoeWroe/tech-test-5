@@ -33,10 +33,11 @@ class App
 
   def run_rovers
     link_commands_to_rovers
-    puts @rover_list
-    # @rover_list.each do |rover|
-    #   controller.link_to_rover(rover)
-    #   controller.land_rover()
+    @rover_list.each do |rover|
+      controller.link_to_rover(rover[0])
+      controller.land_rover(rover[1])
+      controller.command_input(rover[2])
+    end
   end
 
   private
