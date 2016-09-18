@@ -3,11 +3,16 @@ require './app'
 describe App do
   subject(:app) { described_class.new(interpreter) }
 
+  let(:controller)     { NasaController.new }
   let(:interpreter)    { InputInterpreter.new }
   let(:input_file)     { './input/test_input.txt' }
   let(:bad_input_file) { './input/bad_input.txt' }
 
-  # Test the parsing. Place no input error in here not plateau size.
+  describe 'initialization' do
+    it 'should initialize with an input interpreter' do
+      expect(app.interpreter).to be_instance_of InputInterpreter
+    end
+  end
 
   describe 'Interpreting a plateau size command' do
     it "should read an input of '5 5' and create a plateau of size of [5, 5]" do
@@ -20,9 +25,12 @@ describe App do
       app.parse_file(bad_input_file)
       expect { app.create_plateau }.to raise_error PlateauSizeError
     end
+  end
 
-    it "should raise an error if no file has been parsed" do
-      expect { app.create_plateau }.to raise_error NoInputError
+  describe 'creating a controller' do
+    it 'can create a controller' do
+      app.create_controller
+      expect(app.controller).to be_instance_of NasaController
     end
   end
 
@@ -35,7 +43,7 @@ describe App do
 
     it 'should raise an error if no land commands are provided' do
       app.parse_file(bad_input_file)
-      expect{ app.create_rover_list }.to raise_error NoLandCommandError
+      expect { app.create_rover_list }.to raise_error NoLandCommandError
     end
   end
 end

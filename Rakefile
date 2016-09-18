@@ -11,7 +11,8 @@ task default: [:test]
 task :run do
   interpreter = InputInterpreter.new
   app = App.new(interpreter)
-  app.parse_file
+  app.parse_file('./input/test_input.txt')
   app.create_plateau
+  app.create_controller
   app.create_rover_list
 end
