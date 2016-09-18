@@ -21,7 +21,32 @@ class NoLandCommandError < AppError
 
   def message
     'No land command detected, ' \
-    'the input file pased into #parse_input must contain a land command, ' \
+    'the file pased into #parse_input must contain a land command, ' \
     "a land command must use the format 'Integer Integer Cardinal-Direction'."
+  end
+end
+
+class NoMovementCommandError < AppError
+  def initialize
+    super
+  end
+
+  def message
+    'No movement command detected, ' \
+    'the file pased into #parse_input must contain a movement command, ' \
+    "a movement command contains a string of the letters 'L', 'M' or 'R', " \
+    'not seperated by spaces.'
+  end
+end
+
+class NoPlateauCreatedError < AppError
+  def initialize
+    super
+  end
+
+  def message
+    'No plateau detected, ' \
+    'the app needs knowledge of a plateau to run correctly, ' \
+    'please run App#create_plateau.'
   end
 end

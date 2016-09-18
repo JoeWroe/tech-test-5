@@ -23,6 +23,7 @@ class App
   end
 
   def create_controller
+    raise NoPlateauCreatedError if @plateau == []
     @controller = NasaController.new(plateau: plateau)
   end
 
@@ -51,6 +52,8 @@ class App
   end
 
   def link_commands_to_rovers
+    raise NoLandCommandError if landings == []
+    raise NoMovementCommandError if movements == []
     @rover_list = @rover_list.zip(landings, movements)
   end
 end

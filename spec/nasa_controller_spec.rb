@@ -5,12 +5,16 @@ describe NasaController do
 
   let(:robotic_rover) do
     double(:robotic_rover, is_a?: RoboticRover,
+                           position: [],
                            land_rover: landed_rover,
                            move: display_move,
                            display_position: display_move)
   end
 
-  let(:plateau) { double(:plateau, rover_landed: landed_rover) }
+  let(:plateau) do
+    double(:plateau, rover_landed: landed_rover,
+                     current_rovers: [robotic_rover])
+  end
 
   let(:landed_rover) { [:landed_rover] }
   let(:display_move) { 'Rovers position: 1 0 N' }
@@ -30,16 +34,17 @@ describe NasaController do
     end
 
     it 'can read a command input' do
+      controller.land_rover(start_pos)
       expect(controller.command_input(move_command)).to eq display_move
     end
   end
 
-  describe 'Exceptions' do
-    it 'raises an exception linked to something other than a rover' do
+  describe 'raises an exception if' do
+    it 'linked to something other than a rover' do
       expect { controller.link_to_rover(plateau) }.to raise_error RoverLinkError
     end
 
-    it 'raises an exception if not linked to a rover' do
+    it 'not linked to a rover' do
       expect { controller.land_rover("") }.to raise_error NoRoverLinkedError
     end
 

@@ -23,9 +23,10 @@ class NasaController
   end
 
   def command_input(commands)
-    # add error if commands are not in correct format
-    # add error if rover is not landed
+    raise NoRoverLinkedError unless current_rover.is_a? RoboticRover
+    raise NoRoverLandedError unless plateau.current_rovers.include?(current_rover)
     command_iteration(commands)
+    puts current_rover.display_position
     current_rover.display_position
   end
 
