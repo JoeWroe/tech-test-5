@@ -32,6 +32,9 @@ class NavGrid
 
   def create_direction_class(command_input_direction)
     return North.new if command_input_direction == 'N'
+    return East.new if command_input_direction == 'E'
+    return South.new if command_input_direction == 'S'
+    return West.new if command_input_direction == 'W'
   end
 
   def update_coords(coord_change)
