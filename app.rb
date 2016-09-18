@@ -32,7 +32,8 @@ class App
   end
 
   def run_rovers
-    puts link_commands_to_rovers
+    link_commands_to_rovers
+    puts @rover_list
     # @rover_list.each do |rover|
     #   controller.link_to_rover(rover)
     #   controller.land_rover()
