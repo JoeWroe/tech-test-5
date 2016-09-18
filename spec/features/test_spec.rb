@@ -46,4 +46,14 @@ describe App do
       expect { app.create_rover_list }.to raise_error NoLandCommandError
     end
   end
+
+  describe 'Running rovers' do
+    it 'should link to each rover, land it and run the move commands' do
+      app.parse_file(input_file)
+      app.create_plateau
+      app.create_controller
+      app.create_rover_list
+      expect(app.run_rovers).to eq
+    end
+  end
 end

@@ -24,4 +24,10 @@ class InputInterpreter
       command.match(/[0-9]\s[0-9]\s[NSEW]$/)
     end
   end
+
+  def find_rover_movements
+    input_strings.select do |command|
+      command.match(/^[LMR]+$/)
+    end
+  end
 end

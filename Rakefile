@@ -15,4 +15,5 @@ task :run do
   app.create_plateau
   app.create_controller
   app.create_rover_list
+  app.run_rovers
 end

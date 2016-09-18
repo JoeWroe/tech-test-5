@@ -31,9 +31,24 @@ class App
     landings.each { |landing| @rover_list << RoboticRover.new }
   end
 
+  def run_rovers
+    puts link_commands_to_rovers
+    # @rover_list.each do |rover|
+    #   controller.link_to_rover(rover)
+    #   controller.land_rover()
+  end
+
   private
 
   def landings
     interpreter.find_rover_landings
+  end
+
+  def movements
+    interpreter.find_rover_movements
+  end
+
+  def link_commands_to_rovers
+    @rover_list = @rover_list.zip(landings, movements)
   end
 end
