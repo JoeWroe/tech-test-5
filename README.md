@@ -29,16 +29,16 @@ Assume that the square directly North from (x, y) is (x, y+1).
 
 **Test Input:**
 
-5 5  
-1 2 N  
-LMLMLMLMM  
-3 3 E  
-MMRMMRMRRM  
+  5 5  
+  1 2 N  
+  LMLMLMLMM  
+  3 3 E  
+  MMRMMRMRRM  
 
 **Expected Output:**
 
-1 3 N  
-5 1 E  
+  1 3 N  
+  5 1 E  
 
 In the administration of our assessments, ThoughtWorks strives to provide an equal testing opportunity for all candidates. Therefore, we will provide reasonable adjustment to our standard test taking procedures for applicants who have a documented disability within the meaning of the Equality Act. Please let us know when we contact you to schedule the assessments if you require any reasonable adjustment to the standard test taking procedures.
 
@@ -48,47 +48,43 @@ Copyright 2012 ThoughtWorks, Inc
 
 Unzip 'mars-rover.zip' and using the terminal, access the directory that has been created.
 
-`$ cd mars-rover`
+  `$ cd mars-rover`
 
 This Mars Rover application makes use of the Bundler gem. This gem provides a consistent environment for ruby projects, further information and documentation can be found [here](http://bundler.io/). If you haven't already done so, run the following command to install the Bundler gem.
 
-`$ gem install bundler`
+  `$ gem install bundler`
 
 Make use of the Bundler gem and set up a local environment equivalent to the one used to build the app.
 
-`$ bundle install`
+  `$ bundle install`
 
 You can now run the following commands:
 
-`$ rspec`
+  `$ rspec`
 
 or
 
-`$ rake`
+  `$ rake`
 
 provides a printout of the testing suite, the Rakefile also runs the spec files as it's default command. The final line of test output provides a percentage of the program covered by the tests which currently sits at 100.00%.
 
-`$ rubocop`
+  `$ rubocop`
 
 to see any differences between the projects code and the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide)
 
-`$ rake run`
+  `$ rake run`
 
 to run the application using an input file ('./input/test_input.text'), which contains the test input commands defined in the problem.
 
 If you like, you can alter this input to see different outputs, if you do so please use the first line of the file to define a plateau size, then group landings an movements in pairs:
 
-```
-Integer Integer                     # Plateau size commands.
-Integer Integer Direction           # Location of landing and direction you would like the rover to face.
-MovementMovementMovementMovement    # Movement commands in a non-spaced string, made up of either 'L', 'M' or 'R'.
-```
+  `Integer Integer`                     _# Plateau size commands._
+  `Integer Integer Direction`           _# Location of landing and direction you would like the rover to face._
+  `MovementMovementMovementMovement`    _# Movement commands in a non-spaced string, made up of either 'L', 'M' or 'R'._
 
 output should appear in the following format:
 
-```
-$ Rovers position: Integer Integer Direction    # The new position the rover has moved to following your commands.
-```
+  `$ Rovers position: Integer Integer Direction`    # The new position the rover has moved to following your commands.
 
 ##The Design
 
