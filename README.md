@@ -2,7 +2,7 @@
 
 ##Thoughtworks Tech Assignment
 
-As part of the ThoughtWorks application process, I have been asked to complete the 'Mars Rover' kata. In building the Mars Rover app, I intend to demonstrate my current development ability. In particular I'd like to showcase my knowledge of areas such as Test Driven Development (TDD), Object-Oriented Programming (OOP), design principals of OOP such as the Single Responsibility Principle (SRP), encapsulation and dependency management, and design patterns, which can be used to improve adherence with these principals.
+As part of the ThoughtWorks application process, I have been asked to complete the 'Mars Rover' kata. In building the Mars Rover app, I intend to demonstrate my current development ability. In particular I'd like to showcase my knowledge of areas such as Test Driven Development (TDD), Object-Oriented Programming (OOP), design principals of OOP such as the Single Responsibility Principle (SRP), encapsulation and dependency management, and design patterns, which can be used to increase adherence with these principals.
 
 ##The Problem
 
@@ -60,13 +60,35 @@ Make use of the Bundler gem and set up a local environment equivalent to the one
 
 You can now run the following commands:
 
-  `$ rspec`
+`$ rspec`
 
-  provides a printout of the testing suite, the final line provides a percentage of the program covered by the tests.
+or
 
-  `$ rubocop`
+`$ rake`
 
-  to see any differences between the projects code and the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide)
+provides a printout of the testing suite, the Rakefile also runs the spec files as it's default command. The final line of test output provides a percentage of the program covered by the tests which currently sits at 100.00%.
+
+`$ rubocop`
+
+to see any differences between the projects code and the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide)
+
+`$ rake run`
+
+to run the application using an input file ('./input/test_input.text'), which contains the test input commands defined in the problem.
+
+If you like, you can alter this input to see different outputs, if you do so please use the first line of the file to define a plateau size, then group landings an movements in pairs:
+
+```
+Integer Integer                     # Plateau size commands.
+Integer Integer Direction           # Location of landing and direction you would like the rover to face.
+MovementMovementMovementMovement    # Movement commands in a non-spaced string, made up of either 'L', 'M' or 'R'.
+```
+
+output should appear in the following format:
+
+```
+$ Rovers position: Integer Integer Direction    # The new position the rover has moved to following your commands.
+```
 
 ##The Design
 
