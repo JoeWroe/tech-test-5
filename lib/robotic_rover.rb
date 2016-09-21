@@ -12,7 +12,6 @@ class RoboticRover
   end
 
   def land_rover(start_coords, location)
-    # error if start_coords outside location#size
     create_nav_grid(start_coords, location)
     update_position
     create_camera(position[2])
@@ -20,12 +19,10 @@ class RoboticRover
   end
 
   def display_position
-    # add error if rover is not landed.
     "Rovers position: #{position[0]} #{position[1]} #{position[2]}"
   end
 
   def move
-    # error if moves outside limits of plateau#size.
     nav_grid.move
     update_position
   end
@@ -46,8 +43,7 @@ class RoboticRover
     @position = [nav_grid.x_coord, nav_grid.y_coord, nav_grid.direction]
   end
 
-  def create_camera(direction)
-    # Can this creation be moved to initialization?
+  def create_camera(direction)    # Can this creation be moved to initialization?
     @camera = Camera.new(direction)
     camera.toggle_recording
   end

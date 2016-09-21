@@ -35,7 +35,6 @@ class NasaController
   def command_iteration(commands)
     commands.split('').each do |command|
       new_command_class = Command.new(command, current_rover)
-      # is the position change a responsibility of #command_iteration?
       new_command_class.position_change
     end
   end
